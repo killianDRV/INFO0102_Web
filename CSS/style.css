@@ -1,0 +1,319 @@
+/* Polices d'écriture */
+@font-face
+{		/* ajout de la police d'écriture "Dayrom" */
+    font-family: 'Dayrom';
+    src: url('../fonts/DAYROM__.ttf')
+}
+
+@font-face
+{
+	font-family: PoliceNavig;
+	src: url('../fonts/AdventPro-Medium.ttf');
+}
+
+@font-face
+{
+	font-family: recette;
+	src: url('../fonts/Amble-LightCondensed.ttf');
+}
+
+
+/* Globale  : gestion de la police, arrière plan et tailles*/
+:root
+{
+	--couleurFond: rgb(253, 223, 186); /* Fond de couleur pour la navigation et le pied de page */
+    --ecritureNav: #000000;
+    --backgroundBloc: antiquewhite;
+}
+
+body
+{
+	margin: auto;
+	width: auto;
+	font-family: Arial, "Arial Black", sans-serif;
+	background: rgb(254, 205, 146);
+}
+
+li
+{
+	font-family: 'PoliceNavig', serif;
+}
+
+
+nav li
+{
+    font-family: 'Dayrom', serif;
+}
+
+/* Contenu */
+section, aside
+{
+	border-radius: 10px / 10px;
+}
+
+
+/* création et placement de la zone centrale */
+#conteneur
+{
+	width: auto;
+	max-width: 900px;
+	margin: 115px auto auto auto; /* recadre les trois menus par rapport au header */
+	padding: 6px;
+	z-index: 0;
+	background-color: var(--backgroundBloc);
+	box-shadow: 2px 2px 2px black;
+}
+
+#conteneur h2
+{
+	text-align: center;
+}
+
+
+h1, h2, h3
+{
+	color: var(--ecritureNav);
+}
+
+.titre_contact
+{
+	color: inherit;
+}
+
+
+/* Pied de page */
+footer
+{
+	border: 2px solid black;
+	margin: auto;
+	height: auto;
+	width: auto;
+	background-color: var(--couleurFond);
+}
+
+footer ul
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+/* Liens pied de page */
+footer a
+{
+	text-decoration: none;
+	color: var(--ecritureNav);
+	font-size: 1.2em;
+}
+
+footer a:hover
+{
+	text-decoration: underline #fba032 3px;
+	text-underline-position: under;
+	border-radius: 8px;
+}
+
+footer li
+{
+	list-style-type: none;
+}
+
+.copyrigh
+{
+	text-align: center;
+	color: var(--ecritureNav);
+}
+
+
+/* Réseaux sociaux */
+#social
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.fab
+{
+  padding: 15px;
+  margin: 10px;
+  margin-bottom: 10px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+
+.fa-twitter
+{
+  background: white;
+  color: #55ACEE;
+}
+
+.fa-instagram
+{
+  background: white;
+  color: #e4405f;
+}
+
+.fa-facebook-f
+{
+  background: white;
+  color: #3B5998;
+}
+
+
+.fa-twitter:hover
+{
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-instagram:hover
+{
+  background: #e4405f;
+  color: white;
+}
+
+.fa-facebook-f:hover
+{
+  background: #3B5998;
+  color: white;
+}
+
+
+/* Theme Sombre */
+.changeTheme
+{
+	width: 60px;
+	height: 50px;
+	background: var(--couleurFond);
+	font-size: 20px;
+	border-radius: 5px;
+	position: absolute;
+	top: 30px;
+	right: 0;
+	outline: none;
+}
+
+/* Icones du bouton thème sombre */
+#iconesTheme
+{
+	position: relative;
+	display: none;
+}
+
+#iconesTheme .fas
+{
+	color: orange;
+	position: absolute;
+	font-size: 1.7em;
+	top: 10px;
+	right: 12px;
+}
+
+#iconesTheme .fa-sun
+{
+	display: none;
+}
+
+#iconesTheme .fa-moon
+{
+	display: block;
+}
+
+
+/* Pas de bouton pour remonter la page */
+.bouton
+{
+	display: none;
+}
+
+
+
+/*Ecran vraiment petit */
+@media screen and (max-width: 345px)
+{
+	footer ul
+	{
+		padding-right: auto;
+		padding-left: 0;
+	}
+}
+
+@media screen and (min-width: 750px)
+{
+	#iconesTheme
+	{
+		display: block;
+	}
+}
+
+
+/* Responsive vers taille PC */
+@media screen and (min-width: 925px)
+{
+	body
+	{
+		background: url("../Images/fond2.jpg") no-repeat fixed center;
+		background-size: 100% 100%;
+	}
+
+	#conteneur
+	{
+		margin: 150px auto auto auto;
+	}
+
+	footer
+	{
+		margin: 15px auto auto auto;
+	}
+
+
+
+	/* Theme Sombre */
+	.changeTheme
+	{
+		cursor: pointer;
+		width: 100px;
+		height: 50px;
+		position: fixed;
+		top: 120px;
+		right: 0;
+	}
+
+	#iconesTheme .fas
+	{
+		position: fixed;
+		top: 128px;
+		right: 30px;
+	}
+}
+
+
+@media screen and (min-width: 1200px)
+{
+	/* Bouton pour remonter la page */
+	.bouton
+	{
+		cursor: pointer;
+	    height: 75px;
+	    width: 75px;
+	    background: var(--couleurFond);
+	    color: var(--ecritureNav);
+	    border-radius: 50%;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    position: fixed;
+	    right: 20px;
+	    bottom: 20px;
+	}
+
+	.bouton .fas
+	{
+	    font-size: 2em;
+	}
+}

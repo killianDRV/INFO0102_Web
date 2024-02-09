@@ -1,0 +1,296 @@
+:root /* Variable de la couleur des menues ingrédients/recette/matériel */
+{
+	--ecritureNav: #000000;
+	--couleurCercle: none;
+	--couleurTraits: black;
+	--backgroundBloc: antiquewhite;
+}
+
+/* Placement des menus */
+#contenu /* placement des trois menus */
+{
+	margin-top: 115px; /* recadre les trois menus par rapport au header */
+}
+
+section
+{
+	margin: 1px auto auto auto; /* aligne le menu de la recette avec les 2 autres */  
+	padding: 10px;
+	width: 90%;
+	max-width: 500px;
+	background-color: var(--backgroundBloc);
+	box-shadow: 2px 2px 2px black;
+}
+
+aside
+{
+	margin: 0 auto;
+	width: 97%;
+	max-width: 250px; 
+	height: auto;
+	max-height: 500px;
+	box-shadow: 2px 1px 1px black;
+}
+
+aside h2, section h2, aside h3
+{
+	text-align: center;
+}
+
+section h2
+{
+	font-size: 2.3em;
+}
+
+
+#ingredient, #materiel
+{
+	padding: 3px;
+	background-color: var(--backgroundBloc);
+	overflow: auto;
+}
+
+#materiel
+{
+	margin-top: 3px;
+}
+
+#phrase_materiel
+{
+	font-size: 0.6em;
+	text-align: center;
+}
+
+.fa-hand-pointer
+{
+	margin-right: 5px;
+}
+
+
+
+section ol li
+{
+	font-size: 1.1em;
+	font-family: recette;
+	color: var(--ecritureNav);
+}
+
+.parties
+{
+	font-weight: bold;
+}
+
+aside li, p, figcaption
+{
+	color: var(--ecritureNav);
+}
+
+
+/* quelques modifications et placement du input */
+
+aside h3
+{
+	font-size: 1.3em;
+}
+
+
+
+#nbPersonne
+{
+	width: 60px;
+	height: 20px;
+	text-align: center;
+}
+
+#placeBouton
+{
+	display: flex;
+	justify-content: center;
+}
+
+input[type=button]
+{
+	width: 30px;
+}
+
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button
+{ 
+	-webkit-appearance: none; 
+	margin: 0; 
+}
+
+
+
+/* Organisation des puces des 2 menues (ingrédient et matériel) */
+aside ul
+{
+	list-style: none;
+}
+
+aside ul img /* Taille des images */
+{
+	width: 50px;
+	height: 50px;
+}
+
+
+/* Organisation de la liste à puce du matériel */
+.objet_materiel a /* Placement globale des puces matériel */
+{
+	position: relative;
+	left: -10px;
+	display: flex;
+	align-items: center;
+	margin-top: 20px;
+	text-decoration: none;
+	color: black;
+	width: 190px;
+}
+
+.objet_materiel p /* Placement du texte des puces matériel */
+{
+	margin: auto;
+	width: 130px;
+	text-align: center;
+}
+
+/* Organisation de la liste à puce des ingrédients */
+figure /* Placement globale des puces ingrédients */
+{
+	position: relative;
+	/* left: -64px; */
+	left: -50px;
+	display: flex;
+	align-items: center;
+	margin-top: 20px;
+	text-decoration: none;
+	color: black;
+	width: 190px;
+	/* width: 215px; */
+}
+
+figcaption /* Placement du texte des puces ingrédient */
+{
+	margin: auto;
+	width: 150px;
+	text-align: center;
+}
+
+#ingredient p
+{
+	padding-top: 15px;
+	width: 205px;
+	font-weight: bold;
+	text-align: left;
+	position: relative;
+	left: -20px;
+}
+
+
+
+/* Organisation et placement de la bannière indicative */
+#banniere ul /* placement des 3 affiches */
+{
+	margin: auto;
+	padding: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	list-style-type: none;
+}
+
+#banniere li /* taille et correction de placement des affiches */
+{
+	width: 200px;
+	position: relative;
+	left: -20px;
+	border: 2px solid var(--couleurTraits);
+}
+
+#banniere h3, #banniere p 
+{
+	margin: 0;
+	text-align: center;
+}
+
+
+#placement_difficulte /* Placement horizontale et espacé des cercles et de la difficulté */
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#placement_cercles /* placement en ligne des cercles */
+{
+	display: flex;
+	flex-direction: row;
+}
+
+.cercle /* définition du cercle */
+{
+    width: 10px;
+    height: 10px;
+    border-radius: 20px;
+    border: 2px solid black;
+    background: var(--couleurCercle);
+}
+
+
+.cercle:nth-child(1) /* toujours vert car c'est la difficulté minimum */
+{
+	background: green;
+}
+
+.cercle:nth-child(1), .cercle:nth-child(2)
+{
+	margin-right: 1px;
+}
+
+
+/* Séparation de la bannière avec la recette */
+#trait_recette
+{
+	height: 2px;
+	width: 25%;
+	margin: 50px auto 30px auto;
+	background-color: var(--couleurTraits);
+}
+
+#indique_recette
+{
+	font-size: 2em;
+	font-style: oblique;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+#placement_image
+{
+	display: flex;
+	justify-content: center;
+}
+
+#image_recette
+{
+	margin-top: 30px;
+	width: 75%;
+	height: initial;
+}
+
+
+
+/* Puces des recettes */
+.olRecette li
+{
+    margin-bottom: 18px;
+    padding-left: 15px;
+}
+
+.olRecette li:nth-child(1)
+{
+	margin-top: 40px;
+}

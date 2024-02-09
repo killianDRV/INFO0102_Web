@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="CSS/style.css" />
+		<link rel="stylesheet" type="text/css" href="CSS/index.css" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" />
+		<!-- JS -->
+		<script type="text/javascript" src="JS/script.js"></script>
+		<title>Rocket Food</title>
+	</head>
+
+	<body onload="remontePage();">
+		<div class="bouton">
+              <i class="fas fa-arrow-up" class="icone"></i>
+        </div>
+
+		<header> <!-- En-tête et Nav -->
+			<nav id="entete">
+				<ul>
+					<div class="icones">
+						<li><a href="index.html">Accueil</a></li>
+						<i class="fas fa-home"></i>
+					</div>
+
+					<div class="icones">
+						<li><a href="Pages/recette.html">Recettes</a></li>
+						<i class="fas fa-cookie-bite"></i>
+					</div>
+
+					<div class="icones">
+						<li><a href="Pages/materiel.html">Matériel</a></li>
+						<i class="fas fa-blender"></i>
+					</div>
+				</ul>
+			</nav>
+
+			<div id="iconesTheme" title="Changer le thème" onclick="changementTheme()">
+				<div class="changeTheme">
+					<i class="fas fa-sun"></i>
+					<i class="fas fa-moon"></i>
+				</div>
+			</div>
+			
+
+			<aside id="titre"> <!-- Titre et slogan en dessous de la nav -->
+				<h1 class="titreLigne ligneAnimation">Rocket Food</h1>
+				<div id="trait"></div>
+				<h2 class="soustitreLigne sousligneAnimation">Le site de cuisine</h2>
+			</aside>
+		</header>
+
+		<aside id="texte">
+			<h2>Les recettes :</h2>
+			<div class="images">
+				<figure>
+					<a href="Pages/recette.html#entrees">
+						<img src="Images/Images_recettes/entree.jpg" alt="Image d'une entree" />
+						<figcaption>Entrées</figcaption>
+					</a>
+				</figure>
+				<div class="trait_responsive"></div>
+			</div>
+
+			
+			<div class="images">
+				<figure>
+					<a href="Pages/recette.html#plats">
+						<img src="Images/Images_recettes/plat.jpg" alt="Image de lasagnes" />
+						<figcaption>Plats</figcaption>
+					</a>
+				</figure>
+				<div class="trait_responsive"></div>
+			</div>
+
+			<div class="images">
+				<figure>
+					<a href="Pages/recette.html#desserts">
+						<img src="Images/Images_recettes/tiramisu_intro.png" alt="Image d'un tiramisu" />
+						<figcaption>Desserts</figcaption>
+					</a>
+				</figure>
+			</div>
+		</aside>
+
+		<footer>
+			<ul>
+				<li><a href="Pages/partenaires.html">Nos partenaires</a></li>
+				<li><a href="Pages/contact.html">Nous contacter</a></li>
+				<li><a href="Pages/stockage.html">Stockage des données</a></li>
+			</ul>
+
+			<div id="social">
+				<div id="twitter">
+					<a href="#"><i class="fab fa-twitter"></i></a>
+				</div>
+				<div id="instagram">
+					<a href="#"><i class="fab fa-instagram"></i></a>
+				</div>
+
+				<div id="facebook">
+					<a href="#"><i class="fab fa-facebook-f"></i></a>
+				</div>
+			</div>
+			<p class="copyrigh">© Rocket Food 2020. Tous droits réservés.</p>
+		</footer>
+	</body>
+</html>

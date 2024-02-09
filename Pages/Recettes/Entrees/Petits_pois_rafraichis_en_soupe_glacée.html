@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Petits pois rafraichis en soupe glacée</title>
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="../../../CSS/style.css" />
+		<link rel="stylesheet" type="text/css" href="../../../CSS/navigation.css" />
+		<link rel="stylesheet" type="text/css" href="../../../CSS/styleMenuRecette.css" />
+		<link rel="stylesheet" type="text/css" href="../../../CSS/responsive.css" />
+		<link rel="stylesheet" type="text/css" href="../../../CSS/responsiveMenuRecette.css" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" />
+		<!-- JS -->
+		<script type="text/javascript" src="../../../JS/script.js"></script>
+	</head>
+	
+	<body onload="couleurDifficulte(); recupIngredient(); recupNbPersonneInitial(); remontePage();">
+		<div class="bouton">
+              <i class="fas fa-arrow-up" class="icone"></i>
+        </div>
+
+		<header>
+			<h1>Rocket Food</h1>
+			<nav>
+				<a href="../../../index.html">Accueil</a>
+				<a href="../../recette.html">Recettes</a>
+				<a href="../../materiel.html">Matériel</a>
+				<div class="animation start-home"></div>
+			</nav>
+
+			<div id="iconesTheme" title="Changer le thème" onclick="changementTheme()">
+				<div class="changeTheme">
+					<i class="fas fa-sun"></i>
+					<i class="fas fa-moon"></i>
+				</div>
+			</div>
+		</header>
+
+		
+		<div id="contenu">
+			
+			<aside id="ingredient">
+				<h2>Ingrédients :</h2>
+					<h3>Nombre de personnes :</h3>		<!--4 personnes-->
+					<div id="placeBouton">
+						<input type="button" name="moins" value="-" id="moins" onclick="moinsNum()" />
+						<input type="number" name="nbPersonne" value="4" min="1" max="100" id="nbPersonne" />
+						<input type="button" name="plus" value="+" id="plus" onclick="plusNum()" />
+					</div>
+
+				<ul>
+					<p>Soupe de petits pois :</p>
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/petitspois.png" alt="Image de petits pois"/>
+								<figcaption><span class="nombreIngredient">600</span> g petits pois</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/eau.png" alt="Image d'eau"/>
+								<figcaption><span class="nombreIngredient">75</span> cl d'eau minérale</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/huileolive.png" alt="Image d'huile d'olive"/>
+								<figcaption><span class="nombreIngredient">10</span> cl d'huile d'olive</figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<p>Fromage :</p>
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/fromagedechevre.png" alt="Image d'un fromage de chèvre"/>
+								<figcaption><span class="nombreIngredient">80</span> g de fromage de chèvre</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/cailledebrebis.png" alt="Image de caillé de brebis"/>
+								<figcaption><span class="nombreIngredient">20</span> g de caillé de brebis</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/menthe.png" alt="Image de menthe"/>
+								<figcaption><span class="nombreIngredient">0.2</span> botte de menthe fraîche</figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/huileolive.png" alt="Image d'huile d'olive"/>
+								<figcaption><span class="nombreIngredient">6</span> cl huile d'olive</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/sel.png" alt="Image de sel"/>
+								<figcaption>sel</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/poivre.png" alt="Image de poivre"/>
+								<figcaption>poivre</figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<p>Garniture :</p>
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/petitspois.png" alt="Image de petits pois"/>
+								<figcaption><span class="nombreIngredient">40</span> g petits pois</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/paindemie.png" alt="Image de pain de mie"/>
+								<figcaption><span class="nombreIngredient">0.5</span> pain de mie</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/glacon.png" alt="Image d'un glacon"/>
+								<figcaption>glaçon</figcaption>
+							</figure>
+						</li>
+					</div>
+				</ul>
+			</aside>
+
+			<section>
+				<h2>Petits pois rafraichis en soupe glacée</h2>
+				
+				<div id="banniere">
+					<ul>
+						<li>
+							<h3>Temps :</h3>
+							<p>15 minutes</p>
+						</li>
+
+						<li>
+							<h3>Difficulté :</h3>
+							<div id="placement_difficulte">
+								<div id="placement_cercles">
+									<div class="cercle"></div>
+									<div class="cercle"></div>
+									<div class="cercle"></div>
+								</div>
+								<p id="difficulte">Difficile</p> <!-- voir en js pour recupéré la chaine et changer la couleur de la variable des cercles selon niv diff -->
+							</div>	
+						</li>
+
+						<li>
+							<h3>Coût :</h3>
+							<p>Bon marché</p>
+						</li>
+					</ul>
+				</div>
+
+				<div id="trait_recette"></div>
+				<h3 id="indique_recette">Recette :</h3>
+
+				<ol class="olRecette">
+                    <h3 class="parties">Préparation du coulis de petits pois :</h3>
+                   		<li>Ecosser les petits pois. Récupérer les cosses des petits pois et bien les laver. 
+						Mixer les cosses avec de l'eau minéral plate.</li>
+						<li>Passer la préparation au chinois étamine et presser sur un cul de poule rempli de glaçons. </li>
+
+					<h3 class="parties">Préparation de la soupe glacée :</h3>
+						<li>Blanchir et cuire les petits pois à l'eau salée (22g de sel par litre d'eau).  Egoutter les petits pois en conservant l'eau de cuisson.</li>
+						<li>Conserver 40g de petits pois pour la décoration.</li>
+						<li>Mixer les petits pois avec leur eau de cuisson. Mélanger les petits pois au mélange avec les cosses.</li>
+						<li>Monter le mélange avec de l'huile d'olive douce.</li>
+					
+					<h3 class="parties">Préparation du caillé de brebis et du pain melba :</h3>
+						<li>Ciseler la menthe. Mélanger le fromage de chèvre non cendré avec du caillé de brebis. </li>
+						<li>Bien fouetter. Assaisonner avec du sel, du poivre, un peu d'huile d'olive, et la menthe ciselée.</li>
+						<li>Tailler finement le pain, et le faire sécher au four entre 2 plaques pour qu'il devienne croustillant.</li>
+
+					<h3 class="parties">Finitions et dressage :</h3>
+						<li>Dans une assiette creuse, mettre des 3 cercles pour faire des tonnelets de 3 cm de haut avec le fromage. Verser le coulis de petits pois. Retirer les cercles, déposer des petits pois cuits sur le fromage et une goutte d'huile d'olive.</li>
+						<li>Découper le pain melba à l'emporte pièce et le déposer sur le coulis.</li>
+                </ol>
+
+                <div id="placement_image">
+                	<img src="../../../Images/Images_recettes/petitspois.jpg" alt="Image de petits pois rafraichis en soupe glacée" id="image_recette" />
+                </div>
+                
+                <div id="trait_recette"></div>
+				<h3 id="indique_recette">Bon Appétit</h3>
+			</section>
+
+			<aside id="materiel">
+				<h2>Matériel :</h2> <!-- Liste du matériel -->
+					<p id="phrase_materiel"><i class="fas fa-hand-pointer"></i>(Cliquez sur l'un des ustensiles pour l'acheter)</p>
+				<ul>
+					<div class="responsive_placement">
+						<li>
+							<div class="objet_materiel">
+								<a href="https://www.amazon.fr/s?k=chinois+%C3%A9tamine&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss" target="_blank">
+									<img src="../../../Images/Images_ustensiles/chinoisetamine.png" alt="Image d'un chinois étamine"/>
+									<p>1 chinois étamine</p>
+								</a>
+							</div>
+						</li>
+
+						 <li>
+		                	<div class="objet_materiel">
+			                	<a href="https://www.amazon.fr/s?k=passoire&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss" target="_blank">
+			                		<img src="../../../Images/Images_ustensiles/passoire.png" alt="Image d'une passoire" />
+			                		<p>1 passoire</p>
+			                	</a>
+			                </div>
+		                </li>
+	         	   </div>
+
+	                <div class="responsive_placement">
+		                <li>
+		                	<div class="objet_materiel">
+			                	<a href="https://www.amazon.fr/s?k=cul+de+poule&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_2" target="_blank">
+			                		<img src="../../../Images/Images_ustensiles/culdepoule.png" alt="Image d'un cul de poule" />
+			                		<p>1 cul de poule</p>
+			                	</a>
+			                </div>
+		                </li>
+
+		                <li>
+		                	<div class="objet_materiel">
+			                	<a href="https://www.amazon.fr/s?k=poele&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_2" target="_blank">
+			                		<img src="../../../Images/Images_ustensiles/poele.png" alt="Image d'une poêle" />
+			                		<p>1 poêle</p>
+			                	</a>
+			                </div>
+		                </li>
+	           		</div>
+
+	           		<div class="responsive_placement">
+		                <li>
+		                	<div class="objet_materiel">
+		                		<a href="https://www.amazon.fr/s?k=mixeur+plongeant&i=kitchen&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=WUISGL6NNNTG&sprefix=mixeur+plo%2Ckitchen%2C332&ref=nb_sb_ss_ts-a-p_1_10" target="_blank">
+		                			<img src="../../../Images/Images_ustensiles/mixeurplongeant.png" alt="Image d'un mixeur plongeant" />
+		                			<p>1 mixeur plongeant</p>
+		                		</a>
+		                	</div>
+		                </li>
+
+				        <li>
+		                	<div class="objet_materiel">
+			                	<a href="https://www.amazon.fr/s?k=couteau+de+cuisine&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_2" target="_blank">
+			                		<img src="../../../Images/Images_ustensiles/couteau.png" alt="Image d'un couteau" />
+			                		<p>1 couteau</p>
+			                	</a>
+			                </div>
+		                </li>
+	            	</div>
+
+	            	<div class="responsive_placement">
+		                <li>
+		                	<div class="objet_materiel">
+			                	<a href="https://www.amazon.fr/Ibili-716050-Lot-emporte-pi%C3%A8ces-Inox/dp/B001LMUITO/ref=sr_1_5?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=rond+de+cuisine&qid=1607621809&sr=8-5" target="_blank">
+			                		<img src="../../../Images/Images_ustensiles/3rond.png" alt="Image de 3 rond de cuisine" />
+			                		<p>3 rond de cuisine</p>
+			                	</a>
+			                </div>
+		                </li>
+
+		                <li>
+		                	<div class="objet_materiel">
+		                		<a href="https://www.amazon.fr/s?k=fouet&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_2" target="_blank">
+		                			<img src="../../../Images/Images_ustensiles/fouet.png" alt="Image d'un fouet" />
+		                			<p>1 fouet</p>
+		                		</a>
+		                	</div>
+		                </li>
+	         	   </div>
+
+	         	   <div class="responsive_placement">
+		                <li>
+		                	<div class="objet_materiel">
+			                	<a href="https://www.amazon.fr/s?k=four+encastrable&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1ZUI9FQJBSSUS&sprefix=four+enca%2Caps%2C191&ref=nb_sb_ss_ts-a-p_1_9" target="_blank">
+			                		<img src="../../../Images/Images_ustensiles/four.png" alt="Image d'un four" />
+			                		<p>1 four</p>
+			                	</a>
+			                </div>
+		                </li>
+
+		                <li>
+		                	<div class="objet_materiel">
+			                	<a href="https://www.amazon.fr/Anpro-Emporte-Pi%C3%A8ces-Inoxydable-Emporte-pi%C3%A8ces-Diff%C3%A9rentes/dp/B07C3VDSKR/ref=sr_1_13?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=emporte+piece&qid=1607622266&sr=8-13" target="_blank">
+			                		<img src="../../../Images/Images_ustensiles/emportepiece.png" alt="Image d'un emporte pièce" />
+			                		<p>1 emporte pièce</p>
+			                	</a>
+			                </div>
+		                </li>
+		            </div>
+				</ul>	
+			</aside>
+		</div>
+		
+		<footer>
+			<ul>
+				<li><a href="../../partenaires.html">Nos partenaires</a></li>
+				<li><a href="../../contact.html">Nous contacter</a></li>
+				<li><a href="../../stockage.html">Stockage des données</a></li>
+			</ul>
+
+			<div id="social">
+				<div id="twitter">
+					<a href="#"><i class="fab fa-twitter"></i></a>
+				</div>
+				<div id="instagram">
+					<a href="#"><i class="fab fa-instagram"></i></a>
+				</div>
+
+				<div id="facebook">
+					<a href="#"><i class="fab fa-facebook-f"></i></a>
+				</div>
+			</div>
+			<p class="copyrigh">© Rocket Food 2020. Tous droits réservés.</p>
+		</footer>
+	</body>
+</html>

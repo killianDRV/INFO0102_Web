@@ -1,0 +1,201 @@
+:root
+{
+	--ecritureNav: #000000;
+}
+
+/* placement des titres */
+h3
+{
+	text-align: center;
+	font-size: 1.5em;
+	padding: auto;
+}
+
+h4
+{
+	margin-top: 50px;
+	margin-bottom: -7px;
+	text-align: center;
+}
+
+h4, ul li
+{
+	color: var(--ecritureNav);
+}
+
+#partenaires li
+{
+	font-family: recette;
+	padding: 2px;
+	list-style-image: url(../Images/chef-hat.svg);
+}
+
+
+
+#partenaires
+{
+	display: flex;
+	justify-content: center;
+	margin-bottom: 10px;
+}
+
+
+#titre
+{
+	width: auto;
+	margin: 130px auto;
+	font-size: 3.1em;
+	font-weight: normal;
+	text-decoration: underline;
+}
+
+/* placement des toques */
+#toque img
+{
+	max-width: 125px;
+}
+
+#toque
+{
+	margin: auto;
+	width: 50%;
+}
+
+#toque1
+{
+	position: relative;
+	top: -290px;
+	left: -110px;
+}
+
+#toque2
+{
+	position: relative;
+	top: -420px;
+	left: 170px;
+}
+
+/* placement des gif */
+#gif
+{
+	margin-top: -330px;
+	display: flex;
+	justify-content: space-around;
+}
+
+#gif img
+{
+	width: auto;
+	max-width: 150px;
+}
+
+#nom
+{
+	color: var(--ecritureNav);
+	margin: auto;
+	display: flex;
+	justify-content: space-around;
+	font-size: 1.4em;
+	height: 70px; 
+}
+
+
+
+@media screen and (max-width: 345px)
+{
+	/* navigation */
+	nav
+	{
+		width: auto !important;
+	}
+
+	nav .animation
+	{
+		display: none !important;
+	}
+
+
+	#titre
+	{
+		max-width: 200px;
+	}
+
+	#toque1
+	{
+		top: -340px;
+		left: -80px;
+	}
+
+	#toque2
+	{
+		top: -470px;
+		left: 70px;
+	}
+}
+
+
+
+@media screen and (min-width: 450px)
+{
+	#titre
+	{
+		margin-bottom: 170px;
+		font-size: 3.3em;
+	}
+
+	#toque
+	{
+		margin: -335px auto 400px auto;
+		/*width: 600px;*/
+		width: 400px;
+		padding: 0;
+		display: flex;
+		justify-content: space-around;
+	}
+
+	#toque1
+	{
+		position: initial;
+	}
+
+	#toque2
+	{
+		position: initial;
+		
+	}
+
+	#gif, #nom
+	{
+		justify-content: space-around; /* justify-content: space-between; */
+	}
+
+	#nom
+	{
+		margin-top: -10px;
+		padding: 0 20px;
+	}
+}
+
+
+@media screen and (min-width: 725px)
+{
+	#toque
+	{
+		margin: -335px auto 200px auto;
+		width: 600px;
+	}
+
+	#gif, #nom
+	{
+		justify-content: space-between;
+	}
+}
+
+
+@media screen and (min-width: 925px)
+{
+	header
+	{
+		margin-top: -150px !important;
+	}
+}

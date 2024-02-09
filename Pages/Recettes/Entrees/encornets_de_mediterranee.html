@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Encornets de Méditerranée</title>
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="../../../CSS/style.css" />
+		<link rel="stylesheet" type="text/css" href="../../../CSS/navigation.css" />
+		<link rel="stylesheet" type="text/css" href="../../../CSS/styleMenuRecette.css" />
+		<link rel="stylesheet" type="text/css" href="../../../CSS/responsive.css" />
+		<link rel="stylesheet" type="text/css" href="../../../CSS/responsiveMenuRecette.css" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" />
+		<!-- JS -->
+		<script type="text/javascript" src="../../../JS/script.js"></script>
+	</head>
+	
+	<body onload="couleurDifficulte(); recupIngredient(); recupNbPersonneInitial(); remontePage();">
+		<div class="bouton">
+              <i class="fas fa-arrow-up" class="icone"></i>
+        </div>
+
+		<header>
+			<h1>Rocket Food</h1>
+			<nav>
+				<a href="../../../index.html">Accueil</a>
+				<a href="../../recette.html">Recettes</a>
+				<a href="../../materiel.html">Matériel</a>
+				<div class="animation start-home"></div>
+			</nav>
+
+			<div id="iconesTheme" title="Changer le thème" onclick="changementTheme()">
+				<div class="changeTheme">
+					<i class="fas fa-sun"></i>
+					<i class="fas fa-moon"></i>
+				</div>
+			</div>
+		</header>
+
+		
+		<div id="contenu">
+			
+			<aside id="ingredient">
+				<h2>Ingrédients :</h2>
+					<h3>Nombre de personnes :</h3>		<!--6 personnes-->
+					<div id="placeBouton">
+						<input type="button" name="moins" value="-" id="moins" onclick="moinsNum()" />
+						<input type="number" name="nbPersonne" value="6" min="1" max="100" id="nbPersonne" />
+						<input type="button" name="plus" value="+" id="plus" onclick="plusNum()" />
+					</div>
+				<ul>
+					<p>Ragoût de coco :</p>
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/haricotcoco.png" alt="Image de haricot coco"/>
+								<figcaption><span class="nombreIngredient">150</span> g de cocos cuits épluchés</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/pimientodelpiquillo.png" alt="Image de piment"/>
+								<figcaption><span class="nombreIngredient">8</span> g de pimiento del piquillo</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/citron.png" alt="Image de citron "/>
+								<figcaption><span class="nombreIngredient">2</span> g de citron confit</figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/feuilledemarjolaine.png" alt="Image de feuille de marjolaine "/>
+								<figcaption><span class="nombreIngredient">24</span> petite feuille de marjolaine</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/beurre.png" alt="Image de beurre "/>
+								<figcaption><span class="nombreIngredient">20</span> g de beurre</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/sel.png" alt="Image de sel "/>
+								<figcaption>sel fin </figcaption>
+							</figure>
+						</li>
+					</div>
+
+
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/poivreblanc.png" alt="Image de poivre blanc"/>
+								<figcaption>poivre blanc</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/pimentdespelette.png" alt="Image de piment d'espelette"/>
+								<figcaption>piment d'espelette</figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<p>Cuisson des cocos :</p>
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/cocorose.png" alt="Image de coco roses "/>
+								<figcaption><span class="nombreIngredient">1.1</span> kg de coco rosesde Provence</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/ail.png" alt="Image d' ail"/>
+								<figcaption><span class="nombreIngredient">12</span> g d'ail</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/oignon.png" alt="Image d'oignon "/>
+								<figcaption><span class="nombreIngredient">40</span> g d'oignon</figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/celeribranche.png" alt="Image de céleri branche "/>
+								<figcaption><span class="nombreIngredient">50</span> g de céleri branche </figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/carotte.png" alt="Image de carotte"/>
+								<figcaption><span class="nombreIngredient">80</span> g de carotte </figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/poireau.png" alt="Image de poireau"/>
+								<figcaption><span class="nombreIngredient">50</span> g de poireau</figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/tomate.png" alt="Image de tomate"/>
+								<figcaption><span class="nombreIngredient">170</span> g de tomate</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/poivre.png" alt="Image de poivre noir "/>
+								<figcaption><span class="nombreIngredient">4</span> grains de poivre noir</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/fonddevolaille.png" alt="Image de fond de volaille "/>
+								<figcaption><span class="nombreIngredient">2</span> L de fond de volaille </figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/thym.png" alt="Image de thym"/>
+								<figcaption><span class="nombreIngredient">1 </span> branche de thym</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/clousdegirofle.png" alt="Image de clous de girofle "/>
+								<figcaption><span class="nombreIngredient">2</span> clous de girofle</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/sel.png" alt="Image de sel "/>
+								<figcaption>gros sel marin</figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<p>Purée de coco :</p>
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/haricotcoco.png" alt="Image de haricotcoco"/>
+								<figcaption><span class="nombreIngredient">380</span> g de cocos cuits</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/huiledecolza.png" alt="Image d'huile de colza "/>
+								<figcaption><span class="nombreIngredient">50</span> g d'huile de colza</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/ciboulette.png" alt="Image de ciboulette"/>
+								<figcaption>ciboulette </figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/sel.png" alt="Image de sel"/>
+								<figcaption>fleur de sel</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/pimentdespelette.png" alt="Image de piment"/>
+								<figcaption>piment d'espelette </figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<p>Crème de coco :</p>
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/haricotcoco.png" alt="Image de haricot cocos"/>
+								<figcaption><span class="nombreIngredient">380</span> g de cocos cuits </figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/crememonte.png" alt="Image de crème montée"/>
+								<figcaption><span class="nombreIngredient">60</span> g de crème montée</figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/selrose.png" alt="Image de sel rose"/>
+								<figcaption>sel fin rose </figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/pimentdespelette.png" alt="Image de piment d'espelette"/>
+								<figcaption>piment d'espelette</figcaption>
+							</figure>
+						</li>
+					</div>
+
+					
+					<p>Les encornets :</p>
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/encornet.png" alt="Image d'encornet "/>
+								<figcaption><span class="nombreIngredient">15</span> petits encornets</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/huileolive.png" alt="Image d'huile d'olive "/>
+								<figcaption>huile d'olive</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/sel.png" alt="Image de sel fin"/>
+								<figcaption>sel fin</figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/pimentdespelette.png" alt="Image de piment d'espelette"/>
+								<figcaption>piment d'espelette </figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/zestecitron.png" alt="Image de zeste de citron "/>
+								<figcaption>zeste de citron vert</figcaption>
+							</figure>
+						</li>
+					</div>
+
+					
+					<p>Huile de marjolaine :</p>
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/huiledepepinderaisin.png" alt="Image d'huile de pépin de raisin "/>
+								<figcaption>20<span class="nombreIngredient"></span> g d'huile de pépin de raisin</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/feuilledemarjolaine.png" alt="Image de feuilles de marjolaine"/>
+								<figcaption><span class="nombreIngredient">3</span> feuilles de marjolaine</figcaption>
+							</figure>
+						</li>
+					</div>
+				</ul>
+			</aside>
+
+			<section>
+				<h2>Encornets de Méditerranée</h2>
+				
+				<div id="banniere">
+					<ul>
+						<li>
+							<h3>Temps :</h3>
+							<p>2 heures</p>
+						</li>
+
+						<li>
+							<h3>Difficulté :</h3>
+							<div id="placement_difficulte">
+								<div id="placement_cercles">
+									<div class="cercle"></div>
+									<div class="cercle"></div>
+									<div class="cercle"></div>
+								</div>
+								<p id="difficulte">Moyenne</p> <!-- voir en js pour recupéré la chaine et changer la couleur de la variable des cercles selon niv diff -->
+							</div>	
+						</li>
+
+						<li>
+							<h3>Coût :</h3>
+							<p>Moyen</p>
+						</li>
+					</ul>
+				</div>
+
+				<div id="trait_recette"></div>
+				<h3 id="indique_recette">Recette :</h3>
+
+
+				<ol class="olRecette">
+					<h3 class="parties">Préparation de l'huile de marjolaine :</h3>
+                    <li>Mettre les feuilles de marjolaine dans l'huile de pépin de raisin puis monter l’huile à une température de 140° C. Laisser infuser 12 heures puis passer au linge fin.</li>
+
+                    <h3 class="parties">Cuisson des cocos :</h3>
+                    <li>Tailler la garniture en mirepoix. Clouter l'oignon avec les clous de girofle et faire un bouquet garni avec le blanc de poireau et la branche de thym. Cuire l'ensemble des cocos (1,1kg) avec la garniture, les condiments et le fond blanc départ à froid. Saler à mi-cuisson puis les débarrasser et laisser refroidir dans le jus de cuisson à température ambiante.</li>
+
+                    <h3 class="parties">Préparation du ragoût de coco :</h3>
+                    <li>Dans une casserole rassembler, les cocos cuits épluchés avec la brunoise de pimiento del piquillo, la brunoise de citron confit puis le beurre pour bien enrober les cocos. Assaisonner puis au dernier moment y rajouter les feuilles de marjolaine.</li>
+
+                    <h3 class="parties">Préparation de la purée de coco :</h3>
+					<li>Mixer les cocos cuits avec un peu de bouillon de cuisson, puis passer au tamis. Détendre la purée si nécessaire. Réchauffer la purée puis l'assaisonner avec l'huile de colza, fleur de sel, du piment d’Espelette et de la ciboulette ciselée</li>
+
+					<h3 class="parties">Préparation de la crème de coco :</h3>
+					<li>Mixer les cocos cuits avec le bouillon de cuisson, passer au chinois étamine, assaisonner. Juste avant de dresser, ajouter la crème montée puis mixer au mixeur plongeant pour avoir une crème onctueuse et lisse. Assaisonner.</li>
+
+					<h3 class="parties">Préparation des encornets :</h3>
+					<li>Nettoyer les encornets puis les couper en deux. Quadriller les triangles de calamars obtenus côté intérieur, la lame du couteau légèrement inclinée puis les saler. Les faire raidir à l'huile d'olive à la plancha ou à la poêle puis les assaisonner piment et zeste de citron vert.</li>
+
+					<h3 class="parties">Dressage :</h3>
+					<li>Dresser dans l'assiette, les encornets avec la crème de coco, déposer la purée de coco avec le ragoût. Déguster.</li>
+
+                </ol>
+
+                <div id="placement_image">
+                	<img src="../../../Images/Images_recettes/encornetsdemediterrane.jpg" alt="Image d'encornets de mediterranée" id="image_recette" />
+                </div>
+                
+                <div id="trait_recette"></div>
+				<h3 id="indique_recette">Bon Appétit</h3>
+			</section>
+
+			<aside id="materiel">
+				<h2>Matériel :</h2> <!-- Liste du matériel -->
+					<p id="phrase_materiel"><i class="fas fa-hand-pointer"></i>(Cliquez sur l'un des ustensiles pour l'acheter)</p>
+				<ul>
+					<div class="responsive_placement">
+						<li>
+							<div class="objet_materiel">
+								<a href="https://www.amazon.fr/s?k=four+encastrable&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1ZUI9FQJBSSUS&sprefix=four+enca%2Caps%2C191&ref=nb_sb_ss_ts-a-p_1_9" target="_blank">
+									<img src="../../../Images/Images_ustensiles/four.png" alt="Image d'un four"/>
+									<p>1 four</p>
+								</a>
+							</div>
+						</li>
+
+		                <li>
+		                	<div class="objet_materiel">
+			                	<a href="https://www.amazon.fr/s?k=couteau+de+cuisine&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_2" target="_blank">
+			                		<img src="../../../Images/Images_ustensiles/couteau.png" alt="Image d'un couteau" />
+			                		<p>1 couteau</p>
+			                	</a>
+			                </div>
+		                </li>
+
+		                <li>
+		                	<div class="objet_materiel">
+			                	<a href="https://www.amazon.fr/s?k=poele&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_2" target="_blank">
+			                		<img src="../../../Images/Images_ustensiles/poele.png" alt="Image d'une poele" />
+			                		<p>1 poele</p>
+			                	</a>
+			                </div>
+		                </li>
+		            </div>
+
+		            <div class="responsive_placement">
+						<li>
+							<div class="objet_materiel">
+								<a href="https://www.amazon.fr/gp/product/B000W02F0G/ref=as_li_tl?ie=UTF8&camp=1642&creative=19458&creativeASIN=B000W02F0G&linkCode=as2&tag=empreintesucr-21" target="_blank">
+									<img src="../../../Images/Images_ustensiles/thermosonde.png" alt="Image d'une thermo-sonde" />
+									<p>1 thermo-sonde</p>
+								</a>
+							</div>
+						</li>
+
+						<li>
+							<div class="objet_materiel">
+								<a href="https://www.amazon.fr/s?k=mixeur+plongeant&i=kitchen&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=WUISGL6NNNTG&sprefix=mixeur+plo%2Ckitchen%2C332&ref=nb_sb_ss_ts-a-p_1_10" target="_blank">
+									<img src="../../../Images/Images_ustensiles/mixeurplongeant.png" alt="Image d'un mixeur plongeant "/>
+									<p>1 mixeur plongeant </p>
+								</a>
+							</div>
+						</li>
+
+						<li>
+							<div class="objet_materiel">
+								<a href="https://www.amazon.fr/s?k=casserole&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_2" target="_blank">
+									<img src="../../../Images/Images_ustensiles/casserole.png" alt="Image d'une casserole" />
+									<p>1 casserole</p>
+								</a>
+							</div>
+						</li>
+					</div>
+
+					<div class="responsive_placement">
+		                <li>
+		                	<div class="objet_materiel">
+		                		<a href="https://www.amazon.fr/s?k=saladier&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_2" target="_blank">
+		                			<img src="../../../Images/Images_ustensiles/saladier.png" alt="Image d'un saladier" />
+		                			<p>1 saladier</p>
+		                		</a>
+		                	</div>
+		                </li>
+
+						<li>
+							<div class="objet_materiel">
+								<a href="" target="_blank">
+									<img src="../../../Images/Images_ustensiles/four.png" alt="Image d'un four"/>
+									<p>1 four</p>
+								</a>
+							</div>
+						</li>
+					</div>
+				</ul>	
+			</aside>
+		</div>
+		
+		<footer>
+			<ul>
+				<li><a href="../../partenaires.html">Nos partenaires</a></li>
+				<li><a href="../../contact.html">Nous contacter</a></li>
+				<li><a href="../../stockage.html">Stockage des données</a></li>
+			</ul>
+
+			<div id="social">
+				<div id="twitter">
+					<a href="#"><i class="fab fa-twitter"></i></a>
+				</div>
+				<div id="instagram">
+					<a href="#"><i class="fab fa-instagram"></i></a>
+				</div>
+
+				<div id="facebook">
+					<a href="#"><i class="fab fa-facebook-f"></i></a>
+				</div>
+			</div>
+			<p class="copyrigh">© Rocket Food 2020. Tous droits réservés.</p>
+		</footer>
+	</body>
+</html>

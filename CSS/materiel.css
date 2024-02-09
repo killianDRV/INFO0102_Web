@@ -1,0 +1,56 @@
+:root
+{
+	--couleurMatérielPair: #fde5b4;
+	--couleurMatérielImpair: #fcdc9c;
+}
+
+/*  "Création" du tableau de matériel */
+table
+{
+	border-collapse: collapse;
+	text-align: left;
+	margin: 30px auto 25px auto;
+}
+
+td, th
+{
+	border: 2px solid black;
+	text-align: center;
+	width:  150px;
+}
+
+td
+{
+	height: 60px;
+}
+
+.commentaire /* taille plus importante de la colonne commentaire */
+{
+	width: 420px;
+}
+
+td img
+{
+	width: 50% !important;
+	height: 100% !important;
+	border: none !important;
+}
+
+
+/* Coloration des lignes */
+tr:nth-child(even), th
+{
+	background: var(--couleurMatérielPair);
+}
+
+tr:nth-child(odd)
+{
+	background: var(--couleurMatérielImpair);
+}
+
+tr:last-child td:nth-child(3)
+{
+	text-align: justify;
+	padding-left: 10px;
+	padding-right: 10px;
+}

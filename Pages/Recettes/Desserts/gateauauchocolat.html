@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Gateau au chocolat</title>
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="../../../CSS/style.css" />
+		<link rel="stylesheet" type="text/css" href="../../../CSS/navigation.css" />
+		<link rel="stylesheet" type="text/css" href="../../../CSS/styleMenuRecette.css" />
+		<link rel="stylesheet" type="text/css" href="../../../CSS/responsive.css" />
+		<link rel="stylesheet" type="text/css" href="../../../CSS/responsiveMenuRecette.css" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" />
+		<!-- JS -->
+		<script type="text/javascript" src="../../../JS/script.js"></script>
+	</head>
+
+	<body onload="couleurDifficulte(); recupIngredient(); recupNbPersonneInitial(); remontePage();">
+		<div class="bouton">
+              <i class="fas fa-arrow-up" class="icone"></i>
+        </div>
+
+		<header>
+			<h1>Rocket Food</h1>
+			<nav>
+				<a href="../../../index.html">Accueil</a>
+				<a href="../../recette.html">Recettes</a>
+				<a href="../../materiel.html">Matériel</a>
+				<div class="animation start-home"></div>
+			</nav>
+
+			<div id="iconesTheme" title="Changer le thème" onclick="changementTheme()">
+				<div class="changeTheme">
+					<i class="fas fa-sun"></i>
+					<i class="fas fa-moon"></i>
+				</div>
+			</div>
+		</header>
+
+		<div id="contenu">
+			
+			<aside id="ingredient">
+				<h2>Ingrédients :</h2>
+					<h3>Nombre de personnes :</h3>
+					<div id="placeBouton">
+						<input type="button" name="moins" value="-" id="moins" onclick="moinsNum()" />
+						<input type="number" name="nbPersonne" value="6" min="0" max="100" id="nbPersonne" />
+						<input type="button" name="plus" value="+" id="plus" onclick="plusNum()" />
+					</div>
+
+				<ul>
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/chocolatnoir.png" alt="Image de chocolat noir"/>
+								<figcaption><span class="nombreIngredient">200</span> g de chocolat à pâtisser noir</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/beurre.png" alt="Image de beurre"/>
+								<figcaption><span class="nombreIngredient">100</span> g de beurre</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/oeuf.png" alt="Image d'oeuf"/>
+								<figcaption><span class="nombreIngredient">3</span> oeufs</figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/farine.png" alt="Image de farine"/>
+								<figcaption><span class="nombreIngredient">50</span> g de farine</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/sucreenpoudre.png" alt="Image de sucre en poudre"/>
+								<figcaption><span class="nombreIngredient">100</span> g de sucre en poudre</figcaption>
+							</figure>
+						</li>
+					</div>
+				</ul>
+			</aside>
+
+			<section>
+				<h2>Gateau au chocolat</h2>
+				
+				<div id="banniere">
+					<ul>
+						<li>
+							<h3>Temps :</h3>
+							<p>45 minutes</p>
+						</li>
+
+						<li>
+							<h3>Difficulté :</h3>
+							<div id="placement_difficulte">
+								<div id="placement_cercles">
+									<div class="cercle"></div>
+									<div class="cercle"></div>
+									<div class="cercle"></div>
+								</div>
+								<p id="difficulte">Facile</p> <!-- voir en js pour recupéré la chaine et changer la couleur de la variable des cercles selon niv diff -->
+							</div>	
+						</li>
+
+						<li>
+							<h3>Coût :</h3>
+							<p>Bon marché</p>
+						</li>
+					</ul>
+				</div>
+
+				<div id="trait_recette"></div>
+				<h3 id="indique_recette">Recette :</h3>
+
+				<ol class="olRecette">
+                    <li>Préchauffez votre four à 180°C (thermostat 6).</li>
+                    <li>Dans une casserole, faites fondre le chocolat et le beurre coupé en morceaux à feu très doux.</li>
+                    <li>Dans un saladier, ajoutez le sucre, les oeufs, la farine. Mélangez.</li>
+                    <li>Ajoutez le mélange chocolat/beurre. Mélangez bien.</li>
+                    <li>Beurrez et farinez votre moule puis y versez la pâte à gâteau.</li>
+                    <li>Faites cuire au four environ 20 minutes.</li>
+                    <li>A la sortie du four le gâteau ne paraît pas assez cuit. C'est normal, laissez-le refroidir puis démoulez- le.</li>
+                </ol>
+
+                <div id="placement_image">
+                	<img src="../../../Images/Images_recettes/gateauchocolat2.jpg" alt="Image d'un gauteau au chocolat" id="image_recette" />
+                </div>
+                
+                <div id="trait_recette"></div>
+				<h3 id="indique_recette">Bon Appétit</h3>
+			</section>
+
+			<aside id="materiel">
+				<h2>Matériel :</h2> <!-- Liste du matériel -->
+					<p id="phrase_materiel"><i class="fas fa-hand-pointer"></i>(Cliquez sur l'un des ustensiles pour l'acheter)</p>
+				<ul>
+					<div class="responsive_placement">
+		                <li>
+		                	<div class="objet_materiel">
+			                	<a href="https://www.amazon.fr/s?k=moulle+a+manqu%C3%A9&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss" target="_blank">
+			                		<img src="../../../Images/Images_ustensiles/mouleamanque.png" alt="Image d'un moule à manquer" />
+			                		<p>1 moule à manqué</p>
+			                	</a>
+			                </div>
+		                </li>
+
+		                <li>
+		                	<div class="objet_materiel">
+			                	<a href="https://www.amazon.fr/s?k=four+encastrable&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1ZUI9FQJBSSUS&sprefix=four+enca%2Caps%2C191&ref=nb_sb_ss_ts-a-p_1_9" target="_blank">
+			                		<img src="../../../Images/Images_ustensiles/four.png" alt="Image d'un four" />
+			                		<p>1 four</p>
+			                	</a>
+			                </div>
+		                </li>
+
+		                <li>
+		                	<div class="objet_materiel">
+		                		<a href="https://www.amazon.fr/s?k=casserole&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_2" target="_blank">
+		                			<img src="../../../Images/Images_ustensiles/casserole.png" alt="Image d'une casserole" />
+		                			<p>1 casserole</p>
+		                		</a>
+		                	</div>
+		                </li>
+		            </div>
+
+		            <div class="responsive_placement">
+		                <li>
+		                	<div class="objet_materiel">
+		                		<a href="https://www.amazon.fr/s?k=balance+de+cuisine&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_1" target="_blank">
+		                			<img src="../../../Images/Images_ustensiles/balancedecuisine.png" alt="Image d'une balance" />
+		                			<p>1 balance</p>
+		                		</a>
+		                	</div>
+		                </li>
+
+		                <li>
+		                	<div class="objet_materiel">
+		                		<a href="https://www.amazon.fr/s?k=saladier&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_2" target="_blank">
+		                			<img src="../../../Images/Images_ustensiles/saladier.png" alt="Image d'un saladier" />
+		                			<p>1 saladier</p>
+		                		</a>
+		                	</div>
+		                </li>
+
+
+		                <li>
+		                	<div class="objet_materiel">
+		                		<a href="https://www.amazon.fr/s?k=fouet&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_2" target="_blank">
+		                			<img src="../../../Images/Images_ustensiles/fouet.png" alt="Image d'un fouet" />
+		                			<p>1 fouet</p>
+		                		</a>
+		                	</div>
+		                </li>
+		            </div>
+				</ul>
+			</aside>
+		</div>
+
+		<footer>
+			<ul>
+				<li><a href="../../partenaires.html">Nos partenaires</a></li>
+				<li><a href="../../contact.html">Nous contacter</a></li>
+				<li><a href="../../stockage.html">Stockage des données</a></li>
+			</ul>
+
+			<div id="social">
+				<div id="twitter">
+					<a href="#"><i class="fab fa-twitter"></i></a>
+				</div>
+				<div id="instagram">
+					<a href="#"><i class="fab fa-instagram"></i></a>
+				</div>
+
+				<div id="facebook">
+					<a href="#"><i class="fab fa-facebook-f"></i></a>
+				</div>
+			</div>
+			<p class="copyrigh">© Rocket Food 2020. Tous droits réservés.</p>
+		</footer>
+	</body>
+</html>

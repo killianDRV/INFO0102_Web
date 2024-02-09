@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="../CSS/style.css" />
+		<link rel="stylesheet" type="text/css" href="../CSS/recette.css" />
+		<link rel="stylesheet" type="text/css" href="../CSS/navigation.css" />
+		<link rel="stylesheet" type="text/css" href="../CSS/responsive.css" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" />
+		<!-- JS -->
+		<script type="text/javascript" src="../JS/script.js"></script>
+		<title>Rocket Food</title>
+	</head>
+
+	<body onload="remontePage();">
+		<div class="bouton">
+              <i class="fas fa-arrow-up" class="icone"></i>
+        </div>
+
+		<header>
+			<h1>Rocket Food</h1>
+			<nav>
+				<a href="../index.html">Accueil</a>
+				<a href="recette.html">Recettes</a>
+				<a href="materiel.html">Matériel</a>
+				<div class="animation start-home"></div>
+			</nav>
+			
+			<div id="iconesTheme" title="Changer le thème" onclick="changementTheme()">
+				<div class="changeTheme">
+					<i class="fas fa-sun"></i>
+					<i class="fas fa-moon"></i>
+				</div>
+			</div>
+		</header>
+
+		<section id="conteneur">
+			<h2>Nos différentes recettes :</h2>
+
+		<!-- Les Entrées -->
+			<div class="Entrees_Plat_Dessert" id="entrees"> <!-- Place les titres et créer une ancre pour utile depuis l'index.html -->
+				<h3>Nos entrées</h3>
+			</div>
+			<div class="trait"></div> <!-- Création des traits de style -->
+			<div class="trait2"></div>	
+				<div class="menu" class="notU"> <!-- div pour le placement des images et la disparition des bordures non voulu -->
+					<figure>
+						<a href="Recettes/Entrees/quichelorraine.html"><img src="../Images/Images_recettes/quiche_lorraine.jpg" alt="Image d'une quiche lorraine" /></a>
+						<figcaption>Quiche lorraine</figcaption>
+					</figure>
+					
+					<figure>
+						<a href="Recettes/Entrees/timbaledejeanne.html"><img src="../Images/Images_recettes/timbales_de_jeanne.jpg" alt="Image de timbales de jeanne" /></a>
+						<figcaption>Timbales de jeanne</figcaption>
+					</figure>
+				</div>
+
+				<div class="menu" class="notU"> <!-- div pour le placement des images et la disparition des bordures non voulu -->
+					<figure>
+						<a href="Recettes/Entrees/encornets_de_mediterranee.html"><img src="../Images/Images_recettes/encornetsdemediterrane.jpg" alt="Image d'encornets de mediterranée" /></a>
+						<figcaption>Encornets de mediterranée</figcaption>
+					</figure>
+					
+					<figure>
+						<a href="Recettes/Entrees/Roule_de_saumon_fume.html"><img src="../Images/Images_recettes/Roule_de_saumon_fume.jpg" alt="Image de roulés de saumon fumé" /></a>
+						<figcaption>Roulé de saumon fumé</figcaption>
+					</figure>
+				</div>
+
+				<div class="menu" class="notU"> <!-- div pour le placement des images et la disparition des bordures non voulu -->
+					<figure>
+						<a href="Recettes/Entrees/loeuf_de_poule_cuit_nacre.html"><img src="../Images/Images_recettes/loeufdepoulecuitnacre.jpg" alt="Image d'un oeuf de poule cuit nacré" /></a>
+						<figcaption>L'oeuf de poule cuit nacré</figcaption>
+					</figure>
+					
+					<figure>
+						<a href="Recettes/Entrees/Petits_pois_rafraichis_en_soupe_glacée.html"><img src="../Images/Images_recettes/petitspois.jpg" alt="Image de petits pois rafraichis en soupe glacée" /></a>
+						<figcaption>Petits pois rafraichis en soupe glacée</figcaption>
+					</figure>
+				</div>
+
+
+				
+		<!-- Les Plats -->
+			<div class="Entrees_Plat_Dessert" id="plats"> <!-- Place les titres et créer une ancre pour utile depuis l'index.html -->
+				<h3>Nos plats</h3>
+			</div>
+			<div class="trait"></div> <!-- Création des traits de style -->
+			<div class="trait2"></div>
+				<div class="menu" class="notU"> <!-- div pour le placement des images et la disparition des bordures non voulu -->
+					<figure>
+						<a href="Recettes/Plats/burger.html"><img src="../Images/Images_recettes/burger.jpg" alt="Image d'un burger" /></a>
+						<figcaption>Burger</figcaption>
+					</figure>
+					
+					<figure>
+						<a href="Recettes/Plats/risotto_de_pomme.html"><img src="../Images/Images_recettes/risotto_de_pomme.jpg" alt="Image d'un risotto à la pomme" /></a>
+						<figcaption>Risotto à la pomme</figcaption>
+					</figure>
+				</div>
+
+				<div class="menu" class="notU"> <!-- div pour le placement des images et la disparition des bordures non voulu -->
+					<figure>
+						<a href="Recettes/Plats/maki_inverse.html"><img src="../Images/Images_recettes/maki_inverse.jpg" alt="Image d'un maki inversé" /></a>
+						<figcaption>Maki inversé</figcaption>
+					</figure>
+					
+					<figure>
+						<a href="Recettes/Plats/lasagne.html"><img src="../Images/Images_recettes/lasagne.jpg" alt="Image de lasagnes" /></a>
+						<figcaption>Lasagnes</figcaption>
+					</figure>
+				</div>
+
+				<div class="menu" class="notU"> <!-- div pour le placement des images et la disparition des bordures non voulu -->
+					<figure>
+						<a href="Recettes/Plats/risotto_asperges_vertes_girolles_parmesan.html"><img src="../Images/Images_recettes/risotto_asperges_vertes_girolles_parmesan.jpg" alt="Image d'un risotto asperges vertes girolles parmesan" /></a>
+						<figcaption>Risotto asperges vertes girolles parmesan</figcaption>
+					</figure>
+					
+					<figure>
+						<a href="Recettes/Plats/chaud_froid_de_choufleur_et_saint_jacques_a_cru.html"><img src="../Images/Images_recettes/chaudfroiddechoufleuretsaintjacquesacru.jpg" alt="Image d'un chaud froid de choufleur et saint jacques a cru" /></a>
+						<figcaption>Chaud froid de choufleur et saint jacques a cru</figcaption>
+					</figure>
+				</div>
+
+
+			<div class="trait" style="display: none"></div> <!-- dispartition des traits différents -->
+			<div class="trait2" style="display: none"></div>
+
+
+		<!-- Les Desserts -->
+			<div class="Entrees_Plat_Dessert" id="desserts"> <!-- Place les titres et créer une ancre pour utile depuis l'index.html -->
+				<h3>Nos desserts</h3>
+			</div>
+			<div class="trait"></div> <!-- Création des traits de style -->
+			<div class="trait2"></div>
+				<div class="menu" class="notU"> <!-- div pour le placement des images et la disparition des bordures non voulu -->
+					<figure>
+						<a href="Recettes/Desserts/tiramisu.html"><img src="../Images/Images_recettes/tiramisu2.jpg" alt="Image d'un tiramisu" /></a>
+						<figcaption>Tiramisu</figcaption>
+					</figure>
+					
+					<figure>
+						<a href="Recettes/Desserts/gateauauchocolat.html"><img src="../Images/Images_recettes/gateauchocolat.jpg" alt="Image d'un gateau au chocolat" /></a>
+						<figcaption>Gateau au chocolat</figcaption>
+					</figure>
+				</div>
+
+				<div class="menu" class="notU">
+					<figure>
+						<a href="Recettes/Desserts/buche_chocolat_framboise.html"><img src="../Images/Images_recettes/buchechocolatframboise1.jpg" alt="Image d'une buche chocolat framboise" /></a>
+						<figcaption>Buche chocolat framboise</figcaption>
+					</figure>
+
+					<figure>
+						<a href="Recettes/Desserts/Churros.html"><img src="../Images/Images_recettes/churros1.jpg" alt="Image d'un churros" /></a>
+						<figcaption>Churros</figcaption>
+					</figure>
+				</div>
+
+				<div class="menu" class="notU">
+					<figure>
+						<a href="Recettes/Desserts/macaron_kalliste.html"><img src="../Images/Images_recettes/macaron_kalliste_.jpg" alt="Image d'un macaron kallisté" /></a>
+						<figcaption>Macarons kallisté (miel et agrumes)</figcaption>
+					</figure>
+
+					<figure>
+						<a href="Recettes/Desserts/saint_honore.html"><img src="../Images/Images_recettes/saint-honore2.jpg" alt="Image d'un saint_honore" /></a>
+						<figcaption>Un Saint-Honoré</figcaption>
+					</figure>
+				</div>
+		</section>
+
+		<footer>
+			<ul>
+				<li><a href="partenaires.html">Nos partenaires</a></li>
+				<li><a href="contact.html">Nous contacter</a></li>
+				<li><a href="stockage.html">Stockage des données</a></li>
+			</ul>
+
+			<div id="social">
+				<div id="twitter">
+					<a href="#"><i class="fab fa-twitter"></i></a>
+				</div>
+				<div id="instagram">
+					<a href="#"><i class="fab fa-instagram"></i></a>
+				</div>
+
+				<div id="facebook">
+					<a href="#"><i class="fab fa-facebook-f"></i></a>
+				</div>
+			</div>
+			<p class="copyrigh">© Rocket Food 2020. Tous droits réservés.</p>
+		</footer>
+	</body>
+</html>

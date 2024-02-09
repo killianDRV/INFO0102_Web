@@ -1,0 +1,116 @@
+@media screen and (max-width: 345px)
+{
+	section
+	{
+		margin: 5px auto;
+	}
+	aside
+	{
+		margin: 5px auto;
+	}
+
+}
+
+
+
+@media screen and (min-width: 450px)
+{
+	#iconesTheme
+	{
+		display: block;
+	}
+}
+
+
+
+@media screen and (min-width: 925px)
+{
+
+	/* Toutes les recettes */
+	
+	#contenu /* placement des trois menus */
+	{
+		margin-top: 150px; /* recadre les trois menus par rapport au header */
+	}
+
+
+	section
+	{
+		margin: 20px auto; /* aligne le menu de la recette avec les 2 autres */ 
+		width: 100%;
+		max-width: 800px;
+	}
+
+	aside
+	{
+		width: 100%;
+		max-width: 900px; 
+	}
+
+
+	.responsive_placement /* place les puces des asides 3 par 3 */
+	{
+		display: flex;
+		justify-content: space-around;
+		padding-left: 100px;
+		overflow: hidden;
+	}
+
+	figure /* Placement globale des puces ingrédients */
+	{
+		left: -64px;
+		width: 215px;
+	}
+}
+
+
+
+@media screen and (min-width: 1260px)
+{
+	#contenu /* Placement des 3 menus cote a cote */
+	{
+		display: flex;
+		justify-content: space-around;
+		align-items: flex-start;
+	}
+	
+	section
+	{
+		margin: 0 auto auto auto;
+		max-width: 700px;
+	}
+
+
+	aside
+	{
+		margin: 0 auto;
+		max-width: 250px; 
+		max-height: 900px;
+	}
+
+	.responsive_placement /* Disparition des propriétés des écrans plus petits */
+	{
+		display: block;
+		padding-left: initial;
+		overflow: initial;
+	}
+
+	aside h3
+	{
+		font-size: 1.17em;
+	}
+
+
+	#materiel /* Alignement du matériel */
+	{
+		margin-top: 0;
+	}
+
+
+	.objet_materiel a /* Placement globale des puces matériel */
+	{
+		left: -25px;
+		width: 215px;
+	}
+	
+}

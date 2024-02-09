@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Une bûche chocolat framboise</title>
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="../../../CSS/style.css" />
+		<link rel="stylesheet" type="text/css" href="../../../CSS/navigation.css" />
+		<link rel="stylesheet" type="text/css" href="../../../CSS/styleMenuRecette.css" />
+		<link rel="stylesheet" type="text/css" href="../../../CSS/responsive.css" />
+		<link rel="stylesheet" type="text/css" href="../../../CSS/responsiveMenuRecette.css" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" />
+		<!-- JS -->
+		<script type="text/javascript" src="../../../JS/script.js"></script>
+	</head>
+	
+	<body onload="couleurDifficulte(); recupIngredient(); recupNbPersonneInitial(); remontePage();">
+		<div class="bouton">
+              <i class="fas fa-arrow-up" class="icone"></i>
+        </div>
+
+		<header>
+			<h1>Rocket Food</h1>
+			<nav>
+				<a href="../../../index.html">Accueil</a>
+				<a href="../../recette.html">Recettes</a>
+				<a href="../../materiel.html">Matériel</a>
+				<div class="animation start-home"></div>
+			</nav>
+
+			<div id="iconesTheme" title="Changer le thème" onclick="changementTheme()">
+				<div class="changeTheme">
+					<i class="fas fa-sun"></i>
+					<i class="fas fa-moon"></i>
+				</div>
+			</div>
+		</header>
+
+		
+		<div id="contenu">
+			
+			<aside id="ingredient">
+				<h2>Ingrédients :</h2>
+					<h3>Nombre de personnes :</h3>
+					<div id="placeBouton">
+						<input type="button" name="moins" value="-" id="moins" onclick="moinsNum()" />
+						<input type="number" name="nbPersonne" value="6" min="1" max="100" id="nbPersonne" />
+						<input type="button" name="plus" value="+" id="plus" onclick="plusNum()" />
+					</div>
+
+				<ul>
+					<p>La ganache chocolat framboise :</p>
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/pulpedeframboise.png" alt="Image de pulpe de framboise "/>
+								<figcaption><span class="nombreIngredient">150</span> g de pulpe de framboises</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/chocolatnoir.png" alt="Image de chocolat noir "/>
+								<figcaption><span class="nombreIngredient">150</span> g de chocolat noir 64% </figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/beurre.png" alt="Image de beurre "/>
+								<figcaption><span class="nombreIngredient">33</span> g de beurre</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/framboisesurgele.png" alt="Image de framboise surgelée "/>
+								<figcaption><span class="nombreIngredient">60</span> g de framboises entière surgelées</figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<p>Le biscuit au chocolat :</p>
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/beurre.png" alt="Image de beurre "/>
+								<figcaption><span class="nombreIngredient">20</span> g de beurre</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/chocolatnoir.png" alt="Image de chocolat noir "/>
+								<figcaption><span class="nombreIngredient">20</span> g de chocolat noir 64% </figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/oeuf.png" alt="Image d'un oeuf"/>
+								<figcaption><span class="nombreIngredient">1</span> oeuf</figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/miel.png" alt="Image de miel"/>
+								<figcaption><span class="nombreIngredient">20</span> g de miel</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/sucreenpoudre.png" alt="Image de sucre "/>
+								<figcaption><span class="nombreIngredient">30</span> g de sucre</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/poudredamande.png" alt="Image de poudre d'amande "/>
+								<figcaption><span class="nombreIngredient">17</span> g de poudre d’amande</figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/farinetype45.png" alt="Image de farine "/>
+								<figcaption><span class="nombreIngredient">35</span> g de farine type 45</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/levurechimique.png" alt="Image de levure chimique "/>
+								<figcaption><span class="nombreIngredient">2 </span> g de levure chimique</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/cacao.png" alt="Image de cacao "/>
+								<figcaption><span class="nombreIngredient">5</span> g de cacao en poudre</figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/cremeliquide.png" alt="Image de crème liquide "/>
+								<figcaption><span class="nombreIngredient">35</span> g de crème liquide</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/framboisesurgele.png" alt="Image de framboises surgelées "/>
+								<figcaption><span class="nombreIngredient">50</span> g de framboises surgelées</figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<p>La mousse au chocolat :</p>
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/gelatine.png" alt="Image de gélatine "/>
+								<figcaption><span class="nombreIngredient">3</span> g de gélatine</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/chocolatnoir.png" alt="Image de chocolat noir "/>
+								<figcaption><span class="nombreIngredient">140</span> g de chocolat noir 64%</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/lait.png" alt="Image d'une bouteille de lait "/>
+								<figcaption><span class="nombreIngredient">115</span> g de lait entier</figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/cremefleurette.png" alt="Image de crème fleurette "/>
+								<figcaption><span class="nombreIngredient">230</span> g de crème fleurette 30% de MG</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/perlesenchocolat.png" alt="Image de perles en chocolat "/>
+								<figcaption><span class="nombreIngredient">50</span> g de perles croustillantes en chocolat</figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<p>Le glaçage au chocolat :</p>
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/sucreenpoudre.png" alt="Image de sucre en poudre "/>
+								<figcaption><span class="nombreIngredient">150</span> g de sucre en poudre</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/glucoseensirop.png" alt="Image de glucose en sirop"/>
+								<figcaption><span class="nombreIngredient">150</span> g de glucose en sirop</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/eau.png" alt="Image d'eau' "/>
+								<figcaption><span class="nombreIngredient">80</span> g d’eau</figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/cremeliquide.png" alt="Image de crème liquide "/>
+								<figcaption><span class="nombreIngredient">100</span> g de crème liquide (ou de lait concentré)</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/chocolatnoir.png" alt="Image de chocolat noir "/>
+								<figcaption><span class="nombreIngredient">150</span> g de chocolat noir</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/gelatine.png" alt="Image de gélatine "/>
+								<figcaption><span class="nombreIngredient">9</span> g de gélatine</figcaption>
+							</figure>
+						</li>
+					</div>
+				</ul>
+			</aside>
+
+			<section>
+				<h2>Une bûche chocolat framboise</h2>
+				
+				<div id="banniere">
+					<ul>
+						<li>
+							<h3>Temps :</h3>
+							<p>2h15</p>
+						</li>
+
+						<li>
+							<h3>Difficulté :</h3>
+							<div id="placement_difficulte">
+								<div id="placement_cercles">
+									<div class="cercle"></div>
+									<div class="cercle"></div>
+									<div class="cercle"></div>
+								</div>
+								<p id="difficulte">Moyenne</p> <!-- voir en js pour recupéré la chaine et changer la couleur de la variable des cercles selon niv diff -->
+							</div>	
+						</li>
+
+						<li>
+							<h3>Coût :</h3>
+							<p>Moyen</p>
+						</li>
+					</ul>
+				</div>
+
+				<div id="trait_recette"></div>
+				<h3 id="indique_recette">Recette :</h3>
+
+				<ol class="olRecette">
+                    <h3 class="parties">Préparation :</h3>
+						<li>J-2 : réalisez la ganache et le biscuit et réservez le tout au congélateur.</li>
+						<li>J-1 : réalisez la mousse au chocolat puis procédez au montage.</li>
+						<li>Jour-J : préparez le glaçage, glacez votre bûche puis laissez-la décongeler au réfrigérateur (environ 6 heures).</li>
+
+					<h3 class="parties">La ganache chocolat framboise :</h3>
+
+						<li>Faites chauffer la pulpe de framboises sans la faire bouillir (50°C suffit amplement).</li>
+
+						<li>Mettez le chocolat à fondre au micro-onde ou au bain-marie.</li>
+
+						<li>Versez un tiers de pulpe de framboises sur le chocolat et mélangez à l’aide d’une maryse, ajoutez le deuxième tiers, mélangez et terminez avec le restant de pulpe avant de mélanger une dernière fois.</li>
+
+						<li>Ajoutez le beurre quand la ganache est à environ 40°C, puis mixez l’ensemble à l’aide d’un mixeur plongeant (ou mélangez avec un petit fouet à défaut).</li>
+
+						<li>Versez la ganache dans votre moule à insert. Si vous n’en avez pas vous pouvez la verser dans une forme en silicone comme des moules à financier et les assembler ensuite pour faire l’insert de votre bûche.</li>
+
+						<li>Enfoncez les framboises entières surgelées dans la ganache tout le long de votre moule.</li>
+
+						<li>Lissez et réservez au congélateur.</li>
+
+					<h3 class="parties">Le biscuit au chocolat :</h3>
+
+						<li>Préchauffez votre four à 170°C chaleur tournante.</li>
+
+						<li>Mettez le beurre et le chocolat à fondre.</li>
+
+						<li>Mélangez à l’aide d’un fouet l’œuf, le miel et le sucre.</li>
+
+						<li>Ajoutez la poudre d’amandes, la farine tamisée, le cacao en poudre préalablement tamisé et la levure chimique.</li>
+
+						<li>Ajoutez la crème, le chocolat et le beurre fondus puis mélangez.</li>
+
+						<li>Étalez la pâte du biscuit sur une feuille de silicone. Faites en sorte d’avoir une bande assez large et longue pour votre moule à bûche (environ 30 sur 8 cm). La pâte va s’étaler légèrement mais c’est normal.</li>
+
+						<li>Ajoutez les framboises au centre, pensez qu’elles devront rester sur votre bande de biscuit après l’avoir retaillé aux dimensions de votre bûche.</li>
+
+						<li>Enfournez pendant 12 minutes (à 170°C).</li>
+
+						<li>Quand le biscuit est refroidi : découpez-le à la taille de votre moule à bûche, en enlevant 1 centimètre sur la largeur pour qu’il soit masqué par la mousse au chocolat lors du montage.</li>
+
+						<li>Réservez au congélateur.</li>
+
+					<h3 class="parties">La mousse au chocolat :</h3>
+
+						<p>Assurez-vous que votre insert et votre biscuit soient congelés, car il faudra passer immédiatement au montage après avoir réalisé votre mousse au chocolat.</p>
+
+						<li>Mettez la gélatine à tremper dans un grand bol d’eau froide.</li>
+
+						<li>Faites fondre le chocolat au bain-marie et chauffez le lait en parallèle.</li>
+
+						<li>Essorez la gélatine puis ajoutez-la au lait chaud.</li>
+
+						<li>Réalisez une ganache en versant le lait en 3 fois sur le chocolat et en mélangeant à chaque fois à l’aide d’une maryse.</li>
+
+						<li>Montez la crème comme une chantilly à l’aide d’un robot pâtissier ou d’un fouet électrique.</li>
+
+						<li>Vérifiez que votre ganache au chocolat soit à environ 40°C, puis versez-la sur la crème montée (sur le côté pour éviter de faire retomber la crème).</li>
+
+						<li>Mélangez à l’aide d’une maryse jusqu’à obtenir une mousse lisse et sans marbrage.</li>
+
+						<li>Passez immédiatement au montage.</li>
+
+					<h3 class="parties">Montage :</h3>
+
+						<li>Tapissez votre moule à bûche avec les 3/4 de votre mousse au chocolat. Poussez bien la mousse avec votre maryse pour éviter les petites bulles d’air.</li>
+
+						<li>Démoulez la ganache chocolat framboise et enfoncez-la dans la mousse.</li>
+
+						<li>Ajoutez le reste de mousse au chocolat et lissez grossièrement. Répartissez les perles croustillantes en chocolat.</li>
+
+						<li>Déposez votre biscuit au chocolat, la partie lisse vers le dessus puis lissez si nécessaire.</li>
+
+						<li>Réservez votre bûche au congélateur.</li>
+
+					<h3 class="parties">Le glaçage au chocolat :</h3>
+
+						<li>Mettez la gélatine à tremper dans un grand bol d’eau froide.</li>
+
+						<li>Versez le sucre, le glucose et l’eau dans une casserole et portez à ébullition à 103°C.</li>
+
+						<li>Dans un grand verre doseur (fin et haut) versez le chocolat noir et la crème liquide.</li>
+
+						<li>Versez votre sirop sur votre chocolat, puis ajoutez la gélatine préalablement égouttée.</li>
+
+						<li>Mixez à l’aide d’un mixeur plongeant, en prenant bien soin de ne pas incorporer d’air.</li>
+
+						<li>Laissez refroidir le glaçage à température ambiante et utilisez-le à environ 35°C.</li>
+
+						<li>Sortez votre bûche du congélateur et démoulez-la. Déposez-la sur une grille placée sur un plat ou une casserole pour récupérer l’excédent de glaçage.</li>
+
+						<li>Versez le glaçage sur la bûche.</li>
+
+						<li>Tapez légèrement la grille puis laissez figer le glaçage pendant environ une minute avant de déplacer la bûche sur votre plat, à l’aide d’une grande spatule.</li>
+
+					<h3 class="parties">Décor et finition :</h3>
+						<li>Laissez votre bûche chocolat framboise décongeler au réfrigérateur (environ 6 heures) puis décorez-la avec des perles croustillantes.</li>
+                </ol>
+
+                <div id="placement_image">
+                	<img src="../../../Images/Images_recettes/buche2.png" alt="Image d'une buche chocolat framboise" id="image_recette" />
+                </div>
+                
+                <div id="trait_recette"></div>
+				<h3 id="indique_recette">Bon Appétit</h3>
+			</section>
+
+			<aside id="materiel">
+				<h2>Matériel :</h2> <!-- Liste du matériel -->
+					<p id="phrase_materiel"><i class="fas fa-hand-pointer"></i>(Cliquez sur l'un des ustensiles pour l'acheter)</p>
+				<ul>
+					<div class="responsive_placement">
+						<li>
+							<div class="objet_materiel">
+								<a href="https://www.amazon.fr/Buyer-3206-30-Goutti%C3%A8re-D%C3%A9montable-Ronde/dp/B002S52X6E/ref=as_li_ss_tl?ie=UTF8&qid=1480525536&sr=8-2&keywords=moule+%C3%A0+buche&linkCode=ll1&tag=empreintesucr-21&linkId=4157422ed65c489d05dad9f05caf28c8" target="_blank">
+									<img src="../../../Images/Images_ustensiles/mouleabuche.png" alt="Image d'un moule à bûche "/>
+									<p>1 moule à bûche de 30 cm</p>
+								</a>
+							</div>
+						</li>
+
+		                <li>
+							<div class="objet_materiel">
+								<a href="https://www.amazon.fr/dp/B00NSH4TJA/ref=as_li_ss_tl?_encoding=UTF8&psc=1&linkCode=sl1&tag=empreintesucr-21&linkId=bc4278d34616f3b10891f99545b0f849&language=fr_FR" target="_blank">
+									<img src="../../../Images/Images_ustensiles/mouleainsert.png" alt="Image d'un  moule à insert "/>
+									<p>1 moule à insert de 30cm</p>
+								</a>
+							</div>
+						</li>
+
+		              	<li>
+		                	<div class="objet_materiel">
+		                		<a href="https://www.amazon.fr/s?k=mixeur+plongeant&i=kitchen&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=WUISGL6NNNTG&sprefix=mixeur+plo%2Ckitchen%2C332&ref=nb_sb_ss_ts-a-p_1_10" target="_blank">
+		                			<img src="../../../Images/Images_ustensiles/mixeurplongeant.png" alt="Image d'un mixeur plongeant" />
+		                			<p>1 mixeur plongeant</p>
+		                		</a>
+		                	</div>
+		                </li>
+		            </div>
+
+		            <div class="responsive_placement">
+		               	<li>
+							<div class="objet_materiel">
+								<a href="https://www.amazon.fr/Batteur-vitesses-Desire-24670-56-Russell/dp/B079TXMP4R/ref=sr_1_9?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3RK8LS154H29B&dchild=1&keywords=fouet+%C3%A9lectrique&qid=1607594290&s=kitchen&sprefix=fouet+%C3%A9le%2Ckitchen%2C180&sr=1-9" target="_blank">
+									<img src="../../../Images/Images_ustensiles/fouetelectrique.png" alt="Image d'un fouet électrique "/>
+									<p>1 fouet électrique</p>
+								</a>
+							</div>
+						</li>
+
+						<li>
+		                	<div class="objet_materiel">
+		                		<a href="https://www.amazon.fr/s?k=casserole&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_2" target="_blank">
+		                			<img src="../../../Images/Images_ustensiles/casserole.png" alt="Image d'une casserole" />
+		                			<p>1 casserole</p>
+		                		</a>
+		                	</div>
+		                </li>
+
+						 <li>
+		                	<div class="objet_materiel">
+			                	<a href="https://www.amazon.fr/gp/product/B000W02F0G/ref=as_li_tl?ie=UTF8&camp=1642&creative=19458&creativeASIN=B000W02F0G&linkCode=as2&tag=empreintesucr-21" target="_blank">
+			                		<img src="../../../Images/Images_ustensiles/thermosonde.png" alt="Image d'une thermo-sonde" />
+			                		<p>1 thermo-sonde</p>
+			                	</a>
+			                </div>
+		                </li>
+		            </div>
+				</ul>		
+			</aside>
+		</div>
+		
+		<footer>
+			<ul>
+				<li><a href="../../partenaires.html">Nos partenaires</a></li>
+				<li><a href="../../contact.html">Nous contacter</a></li>
+				<li><a href="../../stockage.htmll">Stockage des données</a></li>
+			</ul>
+
+			<div id="social">
+				<div id="twitter">
+					<a href="#"><i class="fab fa-twitter"></i></a>
+				</div>
+				<div id="instagram">
+					<a href="#"><i class="fab fa-instagram"></i></a>
+				</div>
+
+				<div id="facebook">
+					<a href="#"><i class="fab fa-facebook-f"></i></a>
+				</div>
+			</div>
+			<p class="copyrigh">© Rocket Food 2020. Tous droits réservés.</p>
+		</footer>
+	</body>
+</html>

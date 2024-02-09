@@ -1,0 +1,139 @@
+@media screen and (max-width: 345px)
+{
+
+	/* navigation */
+	nav
+	{
+		width: auto;
+	}
+
+	nav .animation
+	{
+		display: none;
+	}
+
+
+
+	/* Page Recette */
+	section img:nth-child(even), section img:nth-child(odd):not(.notU) /* réglage de la taille des images */
+	{
+		border: 2px solid black;
+		width: 180px;
+		height: 180px;
+	}
+
+	figure
+	{
+		margin: auto;
+	}
+
+	.menu /* placement des images */
+	{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+
+
+
+	/* Page Matériel */
+	th:first-child, td:first-child
+	{
+		display: none;
+	}
+
+}
+
+
+@media screen and (min-width: 500px)
+{
+	/* Page Recette */
+	:root
+	{
+		--tailleImage: 200px;
+	}
+
+
+	/* Contact */
+	#bouton .input /* agrandissement du bouton */
+	{
+		width: inherit;
+		padding: 12px 150px 12px 150px; 
+	}
+}
+
+
+@media screen and (min-width: 700px)
+{
+	/* Page Recette */
+	:root
+	{
+		--tailleImage: 270px;
+	}
+
+}
+
+
+
+@media screen and (min-width: 925px)
+{
+	/*  Page Recette */
+	header
+	{
+		margin-top: -150px;
+	}
+
+	figure
+	{
+		width: auto;
+	}
+
+	section img:nth-child(even), section img:nth-child(odd):not(.notU) /* réglage de la taille des images */
+	{
+		border: 2px solid black;
+		width: 370px;
+		height: 370px;
+	}
+
+
+	.trait /*création et positionnement des deux traits */
+	{
+		height: 1px;
+		width: auto;
+		max-width: 43.3%;
+		position: relative;
+		top: -31px;
+		left: -6px;
+		background-color: var(--couleurTraits);
+
+	}
+
+	.trait2
+	{
+		height: 1px;
+		width: auto;
+		max-width: 43.7%;
+		position: relative;
+		top: -32px;
+		left: 515px;
+		background-color: var(--couleurTraits);
+	}
+
+
+
+
+	/* Contact */
+	#formulaire
+	{
+		margin: 50px 50px 50px auto;
+	}
+
+	#info
+	{
+		width: 350px;
+		margin: 50px auto;
+		position: absolute;
+		top: 329px
+	}
+}
+

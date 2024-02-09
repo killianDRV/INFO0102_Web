@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Risotto Asperges vertes, Girolles, Parmesan</title>
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="../../../CSS/style.css" />
+		<link rel="stylesheet" type="text/css" href="../../../CSS/navigation.css" />
+		<link rel="stylesheet" type="text/css" href="../../../CSS/styleMenuRecette.css" />
+		<link rel="stylesheet" type="text/css" href="../../../CSS/responsive.css" />
+		<link rel="stylesheet" type="text/css" href="../../../CSS/responsiveMenuRecette.css" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" />
+		<!-- JS -->
+		<script type="text/javascript" src="../../../JS/script.js"></script>
+	</head>
+	
+	<body onload="couleurDifficulte(); recupIngredient(); recupNbPersonneInitial(); remontePage();">
+		<div class="bouton">
+              <i class="fas fa-arrow-up" class="icone"></i>
+        </div>
+        
+		<header>
+			<h1>Rocket Food</h1>
+			<nav>
+				<a href="../../../index.html">Accueil</a>
+				<a href="../../recette.html">Recettes</a>
+				<a href="../../materiel.html">Matériel</a>
+				<div class="animation start-home"></div>
+			</nav>
+			
+			<div id="iconesTheme" title="Changer le thème" onclick="changementTheme()">
+				<div class="changeTheme">
+					<i class="fas fa-sun"></i>
+					<i class="fas fa-moon"></i>
+				</div>
+			</div>
+		</header>
+
+		
+		<div id="contenu">
+			
+			<aside id="ingredient">
+				<h2>Ingrédients :</h2>
+					<h3>Nombre de personnes :</h3>	<!--4 personnes -->
+					<div id="placeBouton">
+						<input type="button" name="moins" value="-" id="moins" onclick="moinsNum()" />
+						<input type="number" name="nbPersonne" value="4" min="1" max="100" id="nbPersonne" />
+						<input type="button" name="plus" value="+" id="plus" onclick="plusNum()" />
+					</div>
+
+				<ul>
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/riz.png" alt="Image de riz"/>
+								<figcaption>Riz rond </figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/moelle.png" alt="Image de moelle hachée"/>
+								<figcaption><span class="nombreIngredient">60</span> g de moelle hachée</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/oignon.png" alt="Image d'oignon"/>
+								<figcaption><span class="nombreIngredient">60</span> g d'oignon</figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/vinblanc.png" alt="Image de vin blanc"/>
+								<figcaption><span class="nombreIngredient">15</span> cl de vin blanc</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/blancdevolaille.png" alt="Image de blanc de volaille"/>
+								<figcaption><span class="nombreIngredient">40</span> cl de fond blanc de volaille</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/goussedail.png" alt="Image d'une gousse d'ail"/>
+								<figcaption><span class="nombreIngredient">1</span> gousse d'ail</figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/thym.png" alt="Image de Thym"/>
+								<figcaption>Thym</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/laurier.png" alt="Image de laurier"/>
+								<figcaption>laurier</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/cremeliquide.png" alt="Image de crème"/>
+								<figcaption><span class="nombreIngredient">10</span> cl de crème mi-battue</figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/beurre.png" alt="Image de  beurre"/>
+								<figcaption><span class="nombreIngredient">50</span> g de beurre</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/persil.png" alt="Image de persil"/>
+								<figcaption><span class="nombreIngredient">5</span> g de persil plat concassé</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/aspergesvertes.png" alt="Image d'asperges vertes"/>
+								<figcaption><span class="nombreIngredient">8</span> asperges vertes</figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/girolles.png" alt="Image de girolles clous"/>
+								<figcaption><span class="nombreIngredient">50</span> g de girolles clous</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/oseillerouge.png" alt="Image d'oseille rouge"/>
+								<figcaption>Quelques feuilles d'oseille rouge </figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/pourpier.png" alt="Image de pourpier"/>
+								<figcaption>Quelques feuilles de pourpier </figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/beurre.png" alt="Image de  beurre"/>
+								<figcaption><span class="nombreIngredient">2</span> cuillères à soupe de beurre noisette</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/jaunedoeuf.png" alt="Image de jaune d'oeuf"/>
+								<figcaption><span class="nombreIngredient">2</span> jaunes d'oeufs</figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<p>Pour le siphon au parmesan :</p>
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/beurre.png" alt="Image de beurre"/>
+								<figcaption><span class="nombreIngredient">50</span> g de beurre </figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/parmesan.png" alt="Image de parmesan"/>
+								<figcaption><span class="nombreIngredient">150</span> g de parmesan</figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/cremeliquide.png" alt="Image de crème "/>
+								<figcaption><span class="nombreIngredient">300</span>g de crème</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/pureedepommedeterre.png" alt="Image de purée de pommes de terre "/>
+								<figcaption><span class="nombreIngredient">100</span> g de purée de pommes de terre</figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<p>Pour le jus à la sariette :</p>
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/cuissedevolaille.png" alt="Image d'une cuisse de volaille "/>
+								<figcaption><span class="nombreIngredient">1</span> cuisse de volaille</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/oignon.png" alt="Image d'oignons "/>
+								<figcaption><span class="nombreIngredient">50</span> g d'oignons</figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/carotte.png" alt="Image de carottes "/>
+								<figcaption><span class="nombreIngredient">50</span> g de carottes</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/celeribranche.png" alt="Image de céleri "/>
+								<figcaption><span class="nombreIngredient">50</span> g de céleri</figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/poireau.png" alt="Image de poireau "/>
+								<figcaption><span class="nombreIngredient">50</span> g de poireau</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/goussedail.png" alt="Image d'une gousses d'ail "/>
+								<figcaption><span class="nombreIngredient">2</span> gousses d'ail</figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/tomate.png" alt="Image d'une "/>
+								<figcaption><span class="nombreIngredient">1</span> tomate</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/thym.png" alt="Image de thym "/>
+								<figcaption>Thym</figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/laurier.png" alt="Image de laurier "/>
+								<figcaption>laurier </figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/fondbrun.png" alt="Image d'un fond-brun "/>
+								<figcaption><span class="nombreIngredient">1</span> demi-fond brun</figcaption>
+							</figure>
+						</li>
+					</div>
+				</ul>
+			</aside>
+
+			<section>
+				<h2>Risotto Asperges vertes, Girolles, Parmesan</h2>
+				
+				<div id="banniere">
+					<ul>
+						<li>
+							<h3>Temps :</h3>
+							<p>1h45</p>
+						</li>
+
+						<li>
+							<h3>Difficulté :</h3>
+							<div id="placement_difficulte">
+								<div id="placement_cercles">
+									<div class="cercle"></div>
+									<div class="cercle"></div>
+									<div class="cercle"></div>
+								</div>
+								<p id="difficulte">Difficile</p> <!-- voir en js pour recupéré la chaine et changer la couleur de la variable des cercles selon niv diff -->
+							</div>	
+						</li>
+
+						<li>
+							<h3>Coût :</h3>
+							<p>Elevé</p>
+						</li>
+					</ul>
+				</div>
+
+				<div id="trait_recette"></div>
+				<h3 id="indique_recette">Recette :</h3>
+
+				<ol class="olRecette">
+                    <h3 class="parties">Préparation du siphon au parmesan :</h3>
+	                    <li>Faire fondre le parmesan et le beurre dans la crème.</li>
+	                    <li>Ajouter la purée et l’huile d’olives. Mixer au robot, ajouter les jaunes d’œufs, passer au chinois, mettre en siphon et gazer deux fois.</li>
+
+                    <h3 class="parties">Préparation du jus à la sauriette :</h3>
+	                    <li>Emincer les oignons, les carottes, le céleri, et le poireau.</li>
+	                    <li>Écraser les gousses d'ail et tailler grossièrement la tomate.</li>
+	                    <li>Concasser la cuisse de volaille, la faire revenir au beurre clarifié, bien la colorer.</li>
+	                    <li>Ajouter la garniture aromatique (sauf la tomate et la sarriette).</li>
+	                    <li>Bien suer, ajouter la tomate, laisser compoter, mouiller avec le fond brun et cuire doucement pendant 20 minutes.</li>
+	                    <li>Passer au chinois, ajouter la sarriette et laisser infuser pendant 10 minutes.</li>
+	                    <li>Monter au beurre en vannant. Assaisonner.</li>
+                    
+                    <h3 class="parties">Préparation du jus de sariette :</h3>
+	                    <li>Bien rincer à l’eau froide le riz et l’égoutter.</li>
+	                    <li>Hacher l'oignon.</li>
+	                    <li>Faire fondre la moelle, ajouter l’oignon, l’ail et laisser suer.</li>
+	                    <li>Ajouter le riz et bien faire revenir.</li>
+	                    <li>Ajouter le thym et laurier, déglacer au vin blanc et réduire.</li>
+	                    <li>Mouiller avec  le fond de volaille et cuire le risotto jusqu’à réduction du fond.</li>
+
+                  	<h3 class="parties">Préparation du risotto et cuisson :</h3>
+	                    <li>Cuire les asperges vertes à l’eau salée.</li>
+	                    <li>Poêler les girolles.</li>
+	                    <li>Terminer le risotto au dernier moment avec la crème, le beurre et le persil plat.</li>
+
+                    <h3 class="parties">Dressage :</h3>
+                   		<li>Dresser le risotto bien crémeux sur assiette, ajouter les girolles, les asperges, les herbes et un peu d’écume de beurre noisette. Finir avec le jus à la sarriette.</li>
+
+                </ol>
+
+                <div id="placement_image">
+                	<img src="../../../Images/Images_recettes/risotto_asperges_vertes_girolles_parmesan.jpg" alt="Image d'un risotto asperges vertes girolles parmesan" id="image_recette" />
+                </div>
+                
+                <div id="trait_recette"></div>
+				<h3 id="indique_recette">Bon Appétit</h3>
+			</section>
+
+			<aside id="materiel">
+				<h2>Matériel :</h2> <!-- Liste du matériel -->
+					<p id="phrase_materiel"><i class="fas fa-hand-pointer"></i>(Cliquez sur l'un des ustensiles pour l'acheter)</p>
+				<ul>
+					<div class="responsive_placement">
+						<li>
+		                	<div class="objet_materiel">
+		                		<a href="https://www.amazon.fr/s?k=mixeur+plongeant&i=kitchen&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=WUISGL6NNNTG&sprefix=mixeur+plo%2Ckitchen%2C332&ref=nb_sb_ss_ts-a-p_1_10" target="_blank">
+		                			<img src="../../../Images/Images_ustensiles/mixeurplongeant.png" alt="Image d'un mixeur plongeant" />
+		                			<p>1 mixeur plongeant</p>
+		                		</a>
+		                	</div>
+		                </li>
+
+		                <li>
+							<div class="objet_materiel">
+								<a href="https://www.amazon.fr/s?k=chinois+%C3%A9tamine&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss" target="_blank">
+									<img src="../../../Images/Images_ustensiles/chinoisetamine.png" alt="Image d'un chinois étamine"/>
+									<p>1 chinois étamine</p>
+								</a>
+							</div>
+						</li>
+
+		                <li>
+		                	<div class="objet_materiel">
+			                	<a href="https://www.amazon.fr/Upstartech-Cream-Whipper-Professionnel-Inoxydable/dp/B07HRQ21S9/ref=sr_1_5?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=PVK7JSY202P0&dchild=1&keywords=siphon+cuisine&qid=1607705456&sprefix=siphon%2Caps%2C287&sr=8-5" target="_blank">
+			                		<img src="../../../Images/Images_ustensiles/siphon.png" alt="Image d'un siphon" />
+			                		<p>1 siphon</p>
+			                	</a>
+			                </div>
+		                </li>
+		            </div>
+
+		            <div class="responsive_placement">
+		                <li>
+		                	<div class="objet_materiel">
+			                	<a href="https://www.amazon.fr/s?k=couteau+de+cuisine&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_2" target="_blank">
+			                		<img src="../../../Images/Images_ustensiles/couteau.png" alt="Image d'un couteau" />
+			                		<p>1 couteau</p>
+			                	</a>
+			                </div>
+		                </li>
+
+		                <li>
+		                	<div class="objet_materiel">
+			                	<a href="https://www.amazon.fr/s?k=poele&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_2" target="_blank">
+			                		<img src="../../../Images/Images_ustensiles/poele.png" alt="Image d'une poele" />
+			                		<p>1 poele</p>
+			                	</a>
+			                </div>
+		                </li>
+
+		                <li>
+		                	<div class="objet_materiel">
+		                		<a href="https://www.amazon.fr/s?k=casserole&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_2" target="_blank">
+		                			<img src="../../../Images/Images_ustensiles/casserole.png" alt="Image d'une casserole" />
+		                			<p>1 casserole</p>
+		                		</a>
+		                	</div>
+		                </li>
+		            </div>
+				</ul>		
+			</aside>
+		</div>
+		
+		<footer>
+			<ul>
+				<li><a href="../../partenaires.html">Nos partenaires</a></li>
+				<li><a href="../../contact.html">Nous contacter</a></li>
+				<li><a href="../../stockage.html">Stockage des données</a></li>
+			</ul>
+
+			<div id="social">
+				<div id="twitter">
+					<a href="#"><i class="fab fa-twitter"></i></a>
+				</div>
+				<div id="instagram">
+					<a href="#"><i class="fab fa-instagram"></i></a>
+				</div>
+
+				<div id="facebook">
+					<a href="#"><i class="fab fa-facebook-f"></i></a>
+				</div>
+			</div>
+			<p class="copyrigh">© Rocket Food 2020. Tous droits réservés.</p>
+		</footer>
+	</body>
+</html>

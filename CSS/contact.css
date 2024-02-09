@@ -1,0 +1,115 @@
+:root
+{
+	--couleurContact: rgb(253, 223, 186);
+}
+
+
+/* Formulaire de contact */
+#formulaire /* Définition et placement de la zone du formulaire de contact */
+{
+	width: auto;
+	max-width: 450px; 
+	background: var(--couleurContact);
+	margin: 50px auto 50px auto;
+	border-radius: 30px;
+	position: relative;
+	border: 2px solid var(--couleurContact);
+	box-shadow: 2px 2px 2px black;
+}
+
+#titre
+{
+	text-align: center;
+	margin-bottom: 25px;
+	font-size: 1.2em;
+}
+
+form,
+.texte_form /* taille des champs */
+{
+	width: 100%;
+}
+
+.texte_form .input /* Disaparition des bordures et effet de style */
+{
+	width: 70%;
+	margin-bottom: 12px;
+	margin-left: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-right: auto;
+	padding: 15px 40px;
+	box-sizing: border-box;
+	background: #ebeef1;
+	border: 0;
+	outline: none; /* supprime la bordure au clic */
+	box-shadow: 2px 2px 2px black;
+	border-radius: 25px;
+}
+
+.texte_form .input.message /* définition de l'encradré du message */
+{
+	resize: none; /* supprime le redimention du textarea */
+	height: 125px;
+	padding: 15px;
+	margin-bottom: 20px;
+	border-radius: 15px;
+}
+
+#bouton
+{
+	text-align: center;
+	margin-bottom: 25px;
+}
+
+#bouton .input /* agrandissement du bouton */
+{
+	background: #827ffe;
+	color: #fff;
+	font-size: 1.1em;
+	width: 220px;
+	padding: 12px;
+	border: 0;
+	border-radius: 30px;
+	outline: none;
+	box-shadow: 2px 2px 2px black;
+	cursor: pointer;
+}
+
+
+/* Information sur Rocket Food  */
+#info
+{
+	width: auto;
+	max-width: 350px;
+	background: var(--couleurContact);
+	margin: 50px auto;
+	border-radius: 30px;
+	border: 2px solid var(--couleurContact);
+	box-shadow: 2px 2px 2px black;
+}
+
+
+#info ul
+{
+	list-style: none;
+}
+
+#info li
+{
+	font-size: 1.1em;
+}
+
+.icones
+{
+	position: relative;
+	margin: 15px auto;
+}
+
+.icones .fas
+{
+	position: absolute;
+	top: 3px;
+	left: -25px;
+}

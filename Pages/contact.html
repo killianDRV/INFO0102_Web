@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="../CSS/style.css" />
+		<link rel="stylesheet" type="text/css" href="../CSS/contact.css" />
+		<link rel="stylesheet" type="text/css" href="../CSS/navigation.css" />
+		<link rel="stylesheet" type="text/css" href="../CSS/responsive.css" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" />
+		<!-- JS -->
+		<script type="text/javascript" src="../JS/script.js"></script>
+		<title>Rocket Food</title>
+	</head>
+
+	<body onload="remontePage();">
+		<div class="bouton">
+              <i class="fas fa-arrow-up" class="icone"></i>
+        </div>
+
+		<header>
+			<h1>Rocket Food</h1>
+			<nav>
+				<a href="../index.html">Accueil</a>
+				<a href="recette.html">Recettes</a>
+				<a href="materiel.html">Matériel</a>
+				<div class="animation start-home"></div>
+			</nav>
+
+			<div id="iconesTheme" title="Changer le thème" onclick="changementTheme()">
+				<div class="changeTheme">
+					<i class="fas fa-sun"></i>
+					<i class="fas fa-moon"></i>
+				</div>
+			</div>
+		</header>
+
+		<section id="conteneur">
+			<div id="formulaire">
+				<div id="titre">
+					<h3 class="titre_contact">Contactez nous</h3>
+				</div>
+				
+				<form method="post" action="mailto:theo.sinet@gmail.com" enctype="text/plain">
+					<div class="texte_form">
+						<input type="text" name="Nom"class="input" placeholder="Nom" required />
+					</div>
+
+					<div class="texte_form">
+						<input type="text" name="Prenom" class="input" placeholder="Prénom" required />
+					</div>
+
+					<div class="texte_form">
+						<input type="email" name="Email" class="input" placeholder="Email" required />
+					</div>
+
+					<div class="texte_form">
+						<input type="text" name="Objet" class="input" placeholder="Objet" />
+					</div>
+
+					<div class="texte_form">
+						<textarea name="Message" class="input message" cols="30" rows="10" placeholder="Message..." required></textarea>
+					</div>
+					<div id="bouton">
+						<input type="submit" class="input" name="Envoyez" />
+					</div>
+				</form>
+			</div>
+
+			<div id="info">
+				<h2 class="titre_contact">Information sur Rocket Food</h2>
+				<ul>
+					<div class="icones">
+						<li>Email : rocket.food-contact@gmail.com</li>
+							<i class="fas fa-envelope"></i>
+					</div>
+					
+					<div class="icones">
+						<li>Numéro de téléphone : 03.00.99.00.99</li>
+							<i class="fas fa-phone"></i>
+					</div>
+
+					<div class="icones">
+						<li>Adresse : 5 rue factice, Reims, 51000</li>
+							<i class="fas fa-map-marker-alt"></i>
+					</div>
+				</ul>
+			</div>
+		</section>
+
+		<footer>
+			<ul>
+				<li><a href="partenaires.html">Nos partenaires</a></li>
+				<li><a href="contact.html">Nous contacter</a></li>
+				<li><a href="stockage.html">Stockage des données</a></li>
+			</ul>
+
+			<div id="social">
+				<div id="twitter">
+					<a href="#"><i class="fab fa-twitter"></i></a>
+				</div>
+				<div id="instagram">
+					<a href="#"><i class="fab fa-instagram"></i></a>
+				</div>
+
+				<div id="facebook">
+					<a href="#"><i class="fab fa-facebook-f"></i></a>
+				</div>
+			</div>
+			<p class="copyrigh">© Rocket Food 2020. Tous droits réservés.</p>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,323 @@
+:root
+{
+	--couleurFond: rgb(253, 223, 186); /* Fond de couleur pour la navigation et le pied de page */
+	--couleurIcones: black;
+	--ecritureNav: #000000;
+	--couleurTraits: black;
+	--backgroundBloc: antiquewhite;
+}
+
+
+/* En-tête : placement de la banderole de l'en-tête avec l'image et la nav */
+header
+{
+	text-align: center;
+	margin-top: 80px;
+}
+
+header aside
+{
+	padding-top: 80px;
+	width: auto;
+	margin: auto;
+	background: url("../Images/fond2.jpg") no-repeat center;
+	background-size: 100% 100%;
+}
+
+nav
+{
+	z-index: 1;
+	position: fixed;
+	margin-top: -90px;
+	width: 100%;
+	background-color: var(--couleurFond);
+}
+
+nav ul
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	padding: 15px 0px 15px 0px;
+}
+
+nav li
+{
+	margin: auto;
+	font-size: 1.3em;
+	list-style-type: none;
+}
+
+nav a
+{
+	color: var(--ecritureNav);
+	text-decoration: none;
+}
+
+nav a:hover
+{
+	text-decoration: overline #fba032 3px;
+	border-radius: 8px;
+}
+
+
+/* Icones navigation */
+.icones
+{
+	position: relative;
+	margin: 15px auto;
+}
+
+.icones .fas
+{
+	color: var(--couleurIcones);
+	position: absolute;
+	top: 5px;
+	left: -22px;
+}
+
+
+/* Contenu : création et placement de la zone centrale */
+#titre
+{
+	font-size: 1.5em;
+	border-radius: 0px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+#titre h1, #titre h2, #titre #trait
+{
+	position: relative;
+	color: inherit;
+	top: -40px;
+	text-shadow: 2px 2px 2px white;
+}
+
+#titre h2
+{
+	font-size: 1.2em;
+}
+
+#trait
+{
+	height: 2px;
+	width: 25%;
+	margin: auto;
+	background-color: black;
+}
+
+#texte /* bloc central */
+{
+	padding: 0.5em 10px 5px 10px;
+	margin: auto;
+	width: auto;
+	min-width: 180px;
+	max-width: 900px;
+	position: relative;
+	z-index: 0;
+	background-color: var(--backgroundBloc);
+	text-decoration-line: center;
+	box-shadow: 2px 2px 2px black;
+}
+
+#texte h2
+{
+	text-align: center;
+}
+
+
+/* encadré des images */
+.images /* place l'encadré des images*/
+{
+	margin: 10px auto 10px auto;
+}
+
+aside img /* définition de la taille des images */
+{
+
+	width: 100%;
+	height: 100%;
+	max-height: 300px;
+	overflow: hidden;
+	opacity: 0.6;
+}
+
+figcaption /* placement des textes des images */
+{
+	text-align: center;
+	position: relative;
+	top: 0px;
+	color: #ff751a;
+	font-style: oblique;
+	text-shadow: 1px 2px 2px black;
+	font-size: 3em;	
+}
+
+
+aside figure:hover /* animation au survole */
+{
+	transition: 0.75s;
+	transform: scale(1.05);
+}
+
+a
+{	
+	text-decoration: none;
+}
+
+.trait_responsive
+{
+	height: 2px;
+	width: 35%;
+	margin: auto;
+	background: var(--couleurTraits);
+}
+
+
+#iconesTheme
+{
+	display: block;
+}
+
+
+/*Animation*/
+/* apparition de l'écriture */
+@keyframes ecriture_un
+{
+      0%
+      {
+            width: 0;
+      }
+      100%
+      {
+            width: 6em;
+      }
+}
+
+/* clignotement du curseur */
+@keyframes curseur_un
+{
+      0%
+      {
+            border-right-color: rgba(255, 255, 255, 0.75);
+      }
+      100%
+      {
+            border-right-color: transparent;     
+      }
+}
+
+
+
+/* apparition de l'écriture */
+@keyframes ecriture_deux
+{
+      0%
+      {
+            width: 0;
+            opacity: 0;
+      }
+      23%
+      {
+            opacity: 1;
+      }
+      100%
+      {
+            width: 8.3em;
+      }
+}
+
+/* clignotement du curseur */
+@keyframes curseur_deux 
+{
+      0%
+      {
+            border-right-color: rgba(255, 255, 255, 0.75);
+      }
+      100%
+      {
+            border-right-color: transparent;     
+      }
+}
+
+@media screen and (max-width: 345px)
+{
+	.icones .fas
+	{
+		display: none;
+	}
+}
+
+
+
+@media screen and (min-width: 925px)
+{
+	header aside
+	{
+		background: inherit;
+	}
+
+	#titre 
+	{
+		padding-top: 130px;
+		font-size: 3em;
+	}
+
+
+	#trait
+	{
+		margin: -150px auto 160px auto;
+	}
+
+	
+	.titreLigne /* Disposition du titre pour l'animation */
+	{
+		margin: 120px auto 150px auto;
+		border-right: 3px solid rgba(255, 255, 255, 0.75);
+		font-size: 200%;
+		text-align: center;
+		white-space: nowrap;
+		overflow: hidden;
+		transform: translateY(-50%);
+	}
+
+	.ligneAnimation /* animation du titre */
+	{
+	      animation: ecriture_un 2.5s steps(30) 0.5s 1 normal both,
+	      curseur_un 500ms  steps(30) 7 normal forwards;
+	}
+
+
+	.soustitreLigne /* Disposition du sous-titre pour l'animation */
+	{
+	      margin: -120px auto 100px auto;
+	      border-right: 3px solid rgba(255, 255, 255, 0.75);
+	      font-size: 60px;
+	      white-space: nowrap;
+	      overflow: hidden;
+	}
+
+	.sousligneAnimation /* animation du sous-titre */
+	{
+	      animation: ecriture_deux 2.5s steps(30) 3.2s 1 normal both,
+	      curseur_deux 500ms steps(30) 13 normal forwards;
+	}
+
+
+
+	.trait_responsive
+	{
+		display: none;
+	}
+
+	figcaption
+	{
+		position: relative;
+		top: -190px;
+	}
+} 
+
+
+

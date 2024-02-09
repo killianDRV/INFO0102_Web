@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Churros</title>
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="../../../CSS/style.css" />
+		<link rel="stylesheet" type="text/css" href="../../../CSS/navigation.css" />
+		<link rel="stylesheet" type="text/css" href="../../../CSS/styleMenuRecette.css" />
+		<link rel="stylesheet" type="text/css" href="../../../CSS/responsive.css" />
+		<link rel="stylesheet" type="text/css" href="../../../CSS/responsiveMenuRecette.css" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" />
+		<!-- JS -->
+		<script type="text/javascript" src="../../../JS/script.js"></script>
+	</head>
+	
+	<body onload="couleurDifficulte(); recupIngredient(); recupNbPersonneInitial(); remontePage();">
+		<div class="bouton">
+              <i class="fas fa-arrow-up" class="icone"></i>
+        </div>
+
+		<header>
+			<h1>Rocket Food</h1>
+			<nav>
+				<a href="../../../index.html">Accueil</a>
+				<a href="../../recette.html">Recettes</a>
+				<a href="../../materiel.html">Matériel</a>
+				<div class="animation start-home"></div>
+			</nav>
+
+			<div id="iconesTheme" title="Changer le thème" onclick="changementTheme()">
+				<div class="changeTheme">
+					<i class="fas fa-sun"></i>
+					<i class="fas fa-moon"></i>
+				</div>
+			</div>
+		</header>
+
+		
+		<div id="contenu">
+			<aside id="ingredient">
+				<h2>Ingrédients :</h2>
+					<h3>Nombre de personnes :</h3> <!-- par 24 churros-->
+					<div id="placeBouton">
+						<input type="button" name="moins" value="-" id="moins" onclick="moinsNum()" />
+						<input type="number" name="nbPersonne" value="4" min="1" max="100" id="nbPersonne" />
+						<input type="button" name="plus" value="+" id="plus" onclick="plusNum()" />
+					</div>
+
+				<ul>
+					<p> La pâte à churros : </p>
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/lait.png" alt="Image d'une bouteille de lait "/>
+								<figcaption><span class="nombreIngredient">285</span> g de lait</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/beurre.png" alt="Image de beurre "/>
+								<figcaption><span class="nombreIngredient">85</span> g de beurre</figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/sel.png" alt="Image de sel "/>
+								<figcaption><span class="nombreIngredient">2</span> g de sel</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/sucreenpoudre.png" alt="Image de sucre "/>
+								<figcaption><span class="nombreIngredient">2</span> g de sucre</figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/goussedevanille.png" alt="Image d'une gousse de vanille "/>
+								<figcaption><span class="nombreIngredient">1</span> gousse de vanille (facultatif)</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/farinetype45.png" alt="Image de farine T45 "/>
+								<figcaption><span class="nombreIngredient">215</span> g de farine T45</figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/oeuf.png" alt="Image d'un "/>
+								<figcaption><span class="nombreIngredient">100</span> gramme d’oeufs<br />(<span class="nombreIngredient">2</span> oeufs)</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/huiledarachide.png" alt="Image d'huile d'arachide "/>
+								<figcaption>de l'huile d'arachide </figcaption>
+							</figure>
+						</li>
+					</div>
+				</ul>
+			</aside>
+
+			<section>
+				<h2>Churros</h2>
+				
+				<div id="banniere">
+					<ul>
+						<li>
+							<h3>Temps :</h3>
+							<p>30 minutes</p>
+						</li>
+
+						<li>
+							<h3>Difficulté :</h3>
+							<div id="placement_difficulte">
+								<div id="placement_cercles">
+									<div class="cercle"></div>
+									<div class="cercle"></div>
+									<div class="cercle"></div>
+								</div>
+								<p id="difficulte">Moyenne</p> <!-- voir en js pour recupéré la chaine et changer la couleur de la variable des cercles selon niv diff -->
+							</div>	
+						</li>
+
+						<li>
+							<h3>Coût :</h3>
+							<p>Bon marché</p>
+						</li>
+					</ul>
+				</div>
+
+				<div id="trait_recette"></div>
+				<h3 id="indique_recette">Recette :</h3>
+
+				<ol class="olRecette">
+					<h3 class="parties">Préparation :</h3>
+						<h3 class="parties">La pâte à churros :</h3>
+					
+						<li>Faites chauffer le lait, le beurre, le sel, le sucre et les grains de la gousse de vanille dans une casserole.</li>
+
+						<li>Ajoutez la farine en une fois, puis mélangez à l’aide d’une cuillère en bois, sans retirer du feu.</li>
+
+						<li>Il faut bien dessécher la pâte, ce qui peut prendre un peu de temps, elle doit coller au fond de votre casserole. Tant que vous mélangez et que le fond reste parfaitement propre c’est qu’elle n’est pas assez sèche.
+						C’est très important car une pâte mal desséchée risque d’éclater à la cuisson, ce qui est potentiellement dangereux car cela peut projeter de l’huile bouillante.</li>
+		
+						<li>Versez ensuite la pâte dans votre robot pâtissier muni de la feuille. Si vous n’avez pas de robot vous pouvez continuer dans un saladier (mais pas dans votre casserole encore chaude).</li>
+
+						<li>Ajoutez les oeufs, un à un en mélangeant la pâte jusqu’à ce qu’elle soit parfaitement homogène.</li>
+
+						<li>Versez la pâte dans une poche munie d’une douille à petit four, ou à défaut d’une douille cannelée.</li>
+
+						<li>Sur un tapis en silicone, pochez de longues bandes de pâte à churros. Vous devriez pouvoir en faire 8 bandes d’environ 40 cm de long.</li>
+
+						<li>Réservez les churros au congélateur pendant minimum une heure.</li>
+
+						<li>Une fois congelées, vous pouvez couper les bandes en churros de 13 cm environ.</li>
+
+						<li>Conservez-les au congélateur jusqu’au moment de les cuire.</li>
+
+					<h3 class="parties">La cuisson des churros :</h3>
+						<li>Faites chauffer l’huile dans votre wok, ou votre fritteuse, à 190°C.
+						La température est importante, c’est pourquoi il est conseillé d’utiliser une sonde si vous utilisez un wok.
+						(environ 700 mL d’huile dans un wok de 24 cm de diamètre).</li>
+
+						<li>Sortez les churros du congélateur et plongez-les directement dans l’huile, en faisant attention aux projections d’huile.</li>
+
+						<li>Faites-les cuire environ 10 minutes, en les remuant toutes les 2 minutes pour que la cuisson soit homogène. La croûte doit prendre une couleur dorée.</li>
+
+						<li>Sortez-les de l’huile puis déposez-les dans du papier absorbant.</li>
+
+						<li>Terminez en les roulant dans du sucre. Cette étape n’est pas obligatoire, mais permet de donner encore plus de croustillant à vos churros.</li>  
+                </ol>
+
+                <div id="placement_image">
+                	<img src="../../../Images/Images_recettes/churros2.jpg" alt="Image de churros" id="image_recette" />
+                </div>
+                
+                <div id="trait_recette"></div>
+				<h3 id="indique_recette">Bon Appétit</h3>
+			</section>
+
+			<aside id="materiel">
+				<h2>Matériel :</h2> <!-- Liste du matériel -->
+					<p id="phrase_materiel"><i class="fas fa-hand-pointer"></i>(Cliquez sur l'un des ustensiles pour l'acheter)</p>
+				<ul>
+					<div class="responsive_placement">
+						<li>
+							<div class="objet_materiel">
+								<a href="https://www.amazon.fr/dp/B003JFORKC/ref=as_li_ss_tl?_encoding=UTF8&psc=1&linkCode=sl1&tag=empreintesucr-21&linkId=b072eb8f0aea9d166907750600678fbf&language=fr_FR" target="_blank">
+									<img src="../../../Images/Images_ustensiles/wok.png" alt="Image d'un wok "/>
+									<p>1 wok (ou une friteuse)</p>
+								</a>
+							</div>
+						</li>
+
+		                <li>
+							<div class="objet_materiel">
+								<a href="https://www.amazon.fr/gp/product/B000W02F0G/ref=as_li_tl?ie=UTF8&camp=1642&creative=19458&creativeASIN=B000W02F0G&linkCode=as2&tag=empreintesucr-21" target="_blank">
+									<img src="../../../Images/Images_ustensiles/thermosonde.png" alt="Image d'une thermo-sonde "/>
+									<p>1 thermo-sonde (inutile avec une friteuse)</p>
+								</a>
+							</div>
+						</li>
+
+		                <li>
+							<div class="objet_materiel">
+								<a href="" target="_blank">
+									<img src="../../../Images/Images_ustensiles/pocheadouille.png" alt="Image d'une poche à douille "/>
+									<p>1 poche à douille</p>
+								</a>
+							</div>
+						</li>
+					</div>
+
+					<div class="responsive_placement">
+		                <li>
+							<div class="objet_materiel">
+								<a href="https://www.amazon.fr/Scrapcooking-1803-Douille-Cannel%C3%A9e-Argent/dp/B00MYYZ3DE/ref=as_li_ss_tl?_encoding=UTF8&pd_rd_i=B00MYYZ3DE&pd_rd_r=b00abd34-a322-11e9-813b-47196103a6f8&pd_rd_w=882mc&pd_rd_wg=6SbvH&pf_rd_p=ce0bf35d-908d-4dcb-a083-3a6e21394b79&pf_rd_r=9SGP0RACP4CKKPZYNDZV&psc=1&refRID=9SGP0RACP4CKKPZYNDZV&linkCode=sl1&tag=empreintesucr-21&linkId=044912546005ce50659561b608b6b799&language=fr_FR" target="_blank">
+									<img src="../../../Images/Images_ustensiles/douillepetitfour.png" alt="Image d'une douille "/>
+									<p>1 douille petit-four de 14 mm</p>
+								</a>
+							</div>
+						</li>
+
+						<li>
+							<div class="objet_materiel">
+								<a href="https://www.amazon.fr/s?k=tapis+en+silicone&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss" target="_blank">
+									<img src="../../../Images/Images_ustensiles/tapisensilicone.png" alt="Image d'un tapis en silicone "/>
+									<p>1 tapis en silicone</p>
+								</a>
+							</div>
+						</li>
+
+						<li>
+							<div class="objet_materiel">
+								<a href="https://www.amazon.fr/s?k=robot+patissier&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=TQPEDOQLUQVN&sprefix=robot+%2Caps%2C191&ref=nb_sb_ss_ts-a-p_1_6" target="_blank">
+									<img src="../../../Images/Images_ustensiles/robotpatissier.png" alt="Image d'un robot patissier"/>
+									<p>1 robot patissier (facultatif)</p>
+								</a>
+							</div>
+						</li>
+					</div>
+				</ul>		
+			</aside>
+		</div>
+		
+		<footer>
+			<ul>
+				<li><a href="../../partenaires.html">Nos partenaires</a></li>
+				<li><a href="../../contact.html">Nous contacter</a></li>
+				<li><a href="../../stockage.html">Stockage des données</a></li>
+			</ul>
+
+			<div id="social">
+				<div id="twitter">
+					<a href="#"><i class="fab fa-twitter"></i></a>
+				</div>
+				<div id="instagram">
+					<a href="#"><i class="fab fa-instagram"></i></a>
+				</div>
+
+				<div id="facebook">
+					<a href="#"><i class="fab fa-facebook-f"></i></a>
+				</div>
+			</div>
+			<p class="copyrigh">© Rocket Food 2020. Tous droits réservés.</p>
+		</footer>
+	</body>
+</html>

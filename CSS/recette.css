@@ -1,0 +1,65 @@
+:root
+{
+	--couleurTraits: black;
+	--tailleImage: 150px;
+	--ecritureNav: #000000;
+}
+
+
+/* encadré image */
+section img:nth-child(even), section img:nth-child(odd):not(.notU) /* réglage de la taille des images */
+{
+	border: 2px solid black;
+	width: var(--tailleImage);
+	height: var(--tailleImage);
+}
+
+figcaption /* placement des textes des images*/
+{
+	text-align: center;
+	color: var(--ecritureNav);
+	font-size: 1.3em;
+	margin: 2px auto;
+	max-width: 370px;
+}
+
+figure:hover /* effet de dézoome au survol des images */
+{
+	transform: scale(0.991);
+}
+
+figure
+{
+	margin: 15px auto;
+	width: var(--tailleImage); 
+}
+
+.menu /* placement des images */
+{
+	display: flex;
+	justify-content: space-around;
+}
+
+
+/* placement des titres et création de "section" entrées/plats/desserts */
+section h3 /*taille des titres et création des bordures */
+{
+	text-align: center;
+	width: 130px;
+	border: 2px solid var(--couleurTraits);
+	box-shadow: 0px 1px 1px var(--couleurTraits);
+	border-radius: 10px / 10px;
+}
+
+.Entrees_Plat_Dessert /* Centrage des titres */
+{
+	display: flex;
+	justify-content: center;
+}
+
+
+div:target
+{
+	padding-top: 100px;
+	margin-top: -100px;
+}

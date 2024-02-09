@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Tiramisu</title>
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="../../../CSS/style.css" />
+		<link rel="stylesheet" type="text/css" href="../../../CSS/navigation.css" />
+		<link rel="stylesheet" type="text/css" href="../../../CSS/styleMenuRecette.css" />
+		<link rel="stylesheet" type="text/css" href="../../../CSS/responsive.css" />
+		<link rel="stylesheet" type="text/css" href="../../../CSS/responsiveMenuRecette.css" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" />
+		<!-- JS -->
+		<script type="text/javascript" src="../../../JS/script.js"></script>
+	</head>
+
+	<body onload="couleurDifficulte(); recupIngredient(); recupNbPersonneInitial(); remontePage();">
+		<div class="bouton">
+              <i class="fas fa-arrow-up" class="icone"></i>
+        </div>
+
+		<header>
+			<h1>Rocket Food</h1>
+			<nav>
+				<a href="../../../index.html">Accueil</a>
+				<a href="../../recette.html">Recettes</a>
+				<a href="../../materiel.html">Matériel</a>
+				<div class="animation start-home"></div>
+			</nav>
+
+			<div id="iconesTheme" title="Changer le thème" onclick="changementTheme()">
+				<div class="changeTheme">
+					<i class="fas fa-sun"></i>
+					<i class="fas fa-moon"></i>
+				</div>
+			</div>
+		</header>
+		
+		<div id="contenu">
+
+			<aside id="ingredient">
+				<h2>Ingrédients :</h2>
+					<h3>Nombre de personnes :</h3>
+					<div id="placeBouton">
+						<input type="button" name="moins" value="-" id="moins" onclick="moinsNum()" />
+						<input type="number" name="nbPersonne" value="4" min="1" max="100" id="nbPersonne" />
+						<input type="button" name="plus" value="+" id="plus" onclick="plusNum()" />
+					</div>
+
+				<ul>
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/oeuf.png" alt="Image d'un oeuf"/>
+								<figcaption><span class="nombreIngredient">3</span> oeufs</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/sucreroux.png" alt="Image de sucre roux"/>
+								<figcaption><span class="nombreIngredient">100</span> g de sucre roux (sucre de canne)</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/sucrevanille.png" alt="Image de sucre vanillé"/>
+								<figcaption><span class="nombreIngredient">1</span> sachet de sucre vanillé</figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/mascarpone.png" alt="Image de mascarpone"/>
+								<figcaption><span class="nombreIngredient">250</span> g de mascarpone</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/biscuitsalacuillere.png" alt="Image de biscuits à la cuillère"/>
+								<figcaption><span class="nombreIngredient">24</span> biscuits à la cuillère</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/cafenoir.png" alt="Image de café noir"/>
+								<figcaption><span class="nombreIngredient">50</span> cl de café noir non sucré</figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/cacao.png" alt="Image de cacao amer"/>
+								<figcaption><span class="nombreIngredient">30</span> g de cacao amer</figcaption>
+							</figure>
+						</li>
+					</div>
+				</ul>
+			</aside>
+
+			<section>
+				<h2>Tiramisu</h2>
+				
+				<div id="banniere">
+					<ul>
+						<li>
+							<h3>Temps :</h3>
+							<p>4 heures</p>
+						</li>
+
+						<li>
+							<h3>Difficulté :</h3>
+							<div id="placement_difficulte">
+								<div id="placement_cercles">
+									<div class="cercle"></div>
+									<div class="cercle"></div>
+									<div class="cercle"></div>
+								</div>
+								<p id="difficulte">Facile</p> <!-- voir en js pour recupéré la chaine et changer la couleur de la variable des cercles selon niv diff -->
+							</div>	
+						</li>
+
+						<li>
+							<h3>Coût :</h3>
+							<p>Bon marché</p>
+						</li>
+					</ul>
+				</div>
+
+				<div id="trait_recette"></div>
+				<h3 id="indique_recette">Recette :</h3>
+
+				<ol class="olRecette">
+                    <li>Séparer les blancs des jaunes d'oeufs.</li>
+                    <li>Mélanger les jaunes avec le sucre roux et le sucre vanillé.</li>
+                    <li>Ajouter le mascarpone au fouet.</li>
+                    <li>Monter les blancs en neige et les incorporer délicatement à la spatule au mélange précédent.</li>
+                    <li>Mouiller les biscuits dans le café rapidement avant d'en tapisser le fond du plat.</li>
+                    <li>Recouvrir d'une couche de crème au mascarpone puis répéter l'opération en alternant couche de biscuits et couche de crème en terminant par cette dernière.</li>
+                    <li>Saupoudrer de cacao.</li>
+                    <li>Mettre au réfrigérateur 4 heures minimum puis déguster frais.</li>
+                </ol>
+
+                <div id="placement_image">
+                	<img src="../../../Images/Images_recettes/tiramisu2.jpg" alt="Image d'un tiramisu" id="image_recette" />
+                </div>
+                
+                <div id="trait_recette"></div>
+				<h3 id="indique_recette">Bon Appétit</h3>
+			</section>
+
+			<aside id="materiel">
+				<h2>Matériel :</h2> <!-- Liste du matériel -->
+					<p id="phrase_materiel"><i class="fas fa-hand-pointer"></i>(Cliquez sur l'un des ustensiles pour l'acheter)</p>
+				<ul>
+					<div class="responsive_placement">
+		                <li>
+		                	<div class="objet_materiel">
+			                	<a href="https://www.amazon.fr/s?k=cuillere+en+bois&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=U2EAASG6EWWX&sprefix=cuillere+en+%2Caps%2C182&ref=nb_sb_ss_ts-a-p_1_12" target="_blank">
+			                		<img src="../../../Images/Images_ustensiles/cuillereenbois.png" alt="Image d'une cuillere en bois " />
+			                		<p>1 cuillere en bois</p>
+			                	</a>
+			                </div>
+		                </li>
+
+		                <li>
+		                	<div class="objet_materiel">
+			                	<a href="https://www.amazon.fr/s?k=fouet&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_2" target="_blank">
+			                		<img src="../../../Images/Images_ustensiles/fouet.png" alt="Image d'un fouet" />
+			                		<p>1 fouet</p>
+			                	</a>
+			                </div>
+		                </li>
+
+		                <li>
+		                	<div class="objet_materiel">
+		                		<a href="https://www.amazon.fr/s?k=spatule+cuisine&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_1" target="_blank">
+		                			<img src="../../../Images/Images_ustensiles/spatule.png" alt="Image d'une spatule" />
+		                			<p>1 spatule</p>
+		                		</a>
+		                	</div>
+		                </li>
+		            </div>
+
+		            <div class="responsive_placement">
+		                <li>
+		                	<div class="objet_materiel">
+		                		<a href="https://www.amazon.fr/s?k=saladier&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_2" target="_blank">
+		                			<img src="../../../Images/Images_ustensiles/saladier.png" alt="Image d'un saladier" />
+		                			<p>1 saladier</p>
+		                		</a>
+		                	</div>
+		                </li>
+
+
+		                <li>
+		                	<div class="objet_materiel">
+		                		<a href="https://www.amazon.fr/s?k=plat+a+gratin&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_1" target="_blank">
+		                			<img src="../../../Images/Images_ustensiles/platagratin.png" alt="Image d'un plat à gratin" />
+		                			<p>1 plat à gratin</p>
+		                		</a>
+		                	</div>
+		                </li>
+
+		                <li>
+		                	<div class="objet_materiel">
+		                		<a href="https://www.amazon.fr/s?k=balance+de+cuisine&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_1" target="_blank">
+		                			<img src="../../../Images/Images_ustensiles/balancedecuisine.png" alt="Image d'une balance" />
+		                			<p>1 balance</p>
+		                		</a>
+		                	</div>
+		                </li>
+		            </div>
+				</ul>
+			</aside>
+		</div>
+
+		<footer>
+			<ul>
+				<li><a href="../../partenaires.html">Nos partenaires</a></li>
+				<li><a href="../../contact.html">Nous contacter</a></li>
+				<li><a href="../../stockage.html">Stockage des données</a></li>
+			</ul>
+
+			<div id="social">
+				<div id="twitter">
+					<a href="#"><i class="fab fa-twitter"></i></a>
+				</div>
+				<div id="instagram">
+					<a href="#"><i class="fab fa-instagram"></i></a>
+				</div>
+
+				<div id="facebook">
+					<a href="#"><i class="fab fa-facebook-f"></i></a>
+				</div>
+			</div>
+			<p class="copyrigh">© Rocket Food 2020. Tous droits réservés.</p>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Saint-Honoré</title>
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="../../../CSS/style.css" />
+		<link rel="stylesheet" type="text/css" href="../../../CSS/navigation.css" />
+		<link rel="stylesheet" type="text/css" href="../../../CSS/styleMenuRecette.css" />
+		<link rel="stylesheet" type="text/css" href="../../../CSS/responsive.css" />
+		<link rel="stylesheet" type="text/css" href="../../../CSS/responsiveMenuRecette.css" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" />
+		<!-- JS -->
+		<script type="text/javascript" src="../../../JS/script.js"></script>
+	</head>
+	
+	<body onload="couleurDifficulte(); recupIngredient(); recupNbPersonneInitial(); remontePage();">
+		<div class="bouton">
+              <i class="fas fa-arrow-up" class="icone"></i>
+        </div>
+
+		<header>
+			<h1>Rocket Food</h1>
+			<nav>
+				<a href="../../../index.html">Accueil</a>
+				<a href="../../recette.html">Recettes</a>
+				<a href="../../materiel.html">Matériel</a>
+				<div class="animation start-home"></div>
+			</nav>
+
+			<div id="iconesTheme" title="Changer le thème" onclick="changementTheme()">
+				<div class="changeTheme">
+					<i class="fas fa-sun"></i>
+					<i class="fas fa-moon"></i>
+				</div>
+			</div>
+		</header>
+
+		
+		<div id="contenu">
+			
+			<aside id="ingredient">
+				<h2>Ingrédients :</h2>
+					<h3>Nombre de personnes :</h3>   <!--6 personnes-->
+					<div id="placeBouton">
+						<input type="button" name="moins" value="-" id="moins" onclick="moinsNum()" />
+						<input type="number" name="nbPersonne" value="6" min="1" max="100" id="nbPersonne" />
+						<input type="button" name="plus" value="+" id="plus" onclick="plusNum()" />
+					</div>
+
+				<ul>
+					<p>Pâte brisée :</p>
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/farinetype55.png" alt="Image de farine type 55 "/>
+								<figcaption><span class="nombreIngredient">120</span> g de farine type 55 </figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/sucreenpoudre.png" alt="Image de sucre "/>
+								<figcaption><span class="nombreIngredient">10</span> g de sucre</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/sel.png" alt="Image de sel "/>
+								<figcaption><span class="nombreIngredient">1</span> pincée de sel </figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/beurre.png" alt="Image de beurre"/>
+								<figcaption><span class="nombreIngredient">90</span> de beurre pommade</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/eau.png" alt="Image d'eau "/>
+								<figcaption><span class="nombreIngredient">33</span> g d'eau </figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/vinaigreblanc.png" alt="Image de vinaigre blanc "/>
+								<figcaption><span class="nombreIngredient">1</span> cuillère à café de vinaigre blanc</figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<p>Le caramel beurre salé :</p>
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/sucreenpoudre.png" alt="Image de sucre"/>
+								<figcaption><span class="nombreIngredient">200</span> g de sucre</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/mieldacacia.png" alt="Image de miel d'acacia "/>
+								<figcaption><span class="nombreIngredient">30</span> g de miel d'acacia</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/cremeliquide.png" alt="Image de crème liquide "/>
+								<figcaption><span class="nombreIngredient">160</span> g de crème liquide </figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/beurre.png" alt="Image de beurre "/>
+								<figcaption><span class="nombreIngredient">60</span> g de beurre</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/fleurdesel.png" alt="Image de fleur de sel "/>
+								<figcaption><span class="nombreIngredient">2</span> g de fleur de sel </figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<p>La crème mascarpone à la vanille :</p>
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/cremeliquide.png" alt="Image de crème liquide "/>
+								<figcaption><span class="nombreIngredient">290</span> g de crème liquide</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/jaunedoeuf.png" alt="Image d'un jaune d'oeuf"/>
+								<figcaption><span class="nombreIngredient">58</span> g de jaune d’œuf (3 jaunes)</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/sucresemoule.png" alt="Image de sucre semoule "/>
+								<figcaption><span class="nombreIngredient">75</span> g de sucre semoule </figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/gelatine.png" alt="Image de gélatine "/>
+								<figcaption><span class="nombreIngredient">5</span> g de gélatine (deux feuilles et demi) </figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/goussedevanille.png" alt="Image d'une gousse de vanille "/>
+								<figcaption><span class="nombreIngredient">1</span> gousse de vanille </figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/mascarpone.png" alt="Image de mascarpone "/>
+								<figcaption><span class="nombreIngredient">250</span> g de mascarpone </figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<p>Le craquelin croustillant :</p>
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/beurre.png" alt="Image de beurre pommade "/>
+								<figcaption><span class="nombreIngredient">25</span> g de beurre pommade </figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/sucreroux.png" alt="Image de sucre roux "/>
+								<figcaption><span class="nombreIngredient">31</span> g de sucre roux </figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/farinetype45.png" alt="Image de farine type 45"/>
+								<figcaption><span class="nombreIngredient">31</span> g de farine type 45 </figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/sel.png" alt="Image de sel "/>
+								<figcaption><span class="nombreIngredient">1</span> petite pincée de sel </figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<p>La pâte à choux :</p>
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/eau.png" alt="Image d'eau "/>
+								<figcaption><span class="nombreIngredient">62</span> g d'eau </figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/lait.png" alt="Image de lait "/>
+								<figcaption><span class="nombreIngredient">62</span> g de lait</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/beurre.png" alt="Image de  beurre "/>
+								<figcaption><span class="nombreIngredient">55</span> g de beurre </figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/farinetype45.png" alt="Image de farine type 45 "/>
+								<figcaption><span class="nombreIngredient">70</span> g de farine type 45 </figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/sel.png" alt="Image de sel "/>
+								<figcaption><span class="nombreIngredient">2</span> g de sel</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/sucreenpoudre.png" alt="Image de sucre "/>
+								<figcaption><span class="nombreIngredient">2</span> g de sucre </figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/oeuf.png" alt="Image d'oeuf "/>
+								<figcaption><span class="nombreIngredient">125</span> g d'oeuf </figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<p>Chantilly :</p>
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/cremefleurette.png" alt="Image de crème fleurette"/>
+								<figcaption><span class="nombreIngredient">250</span> g de crème fleurette </figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/sucreenpoudre.png" alt="Image de sucre "/>
+								<figcaption><span class="nombreIngredient">20</span> g de sucre </figcaption>
+							</figure>
+						</li>
+					</div>
+				</ul>
+			</aside>
+
+			<section>
+				<h2>Un Saint-Honoré</h2>
+				
+				<div id="banniere">
+					<ul>
+						<li>
+							<h3>Temps :</h3>
+							<p>4 heures</p>
+						</li>
+
+						<li>
+							<h3>Difficulté :</h3>
+							<div id="placement_difficulte">
+								<div id="placement_cercles">
+									<div class="cercle"></div>
+									<div class="cercle"></div>
+									<div class="cercle"></div>
+								</div>
+								<p id="difficulte">Difficile</p> <!-- voir en js pour recupéré la chaine et changer la couleur de la variable des cercles selon niv diff -->
+							</div>	
+						</li>
+
+						<li>
+							<h3>Coût :</h3>
+							<p>Moyen</p>
+						</li>
+					</ul>
+				</div>
+
+				<div id="trait_recette"></div>
+				<h3 id="indique_recette">Recette :</h3>
+
+				<ol class="olRecette">
+                    <h3 class="parties">Préparation :</h3>
+						<p>J-1 : Réalisez la pâte brisée, le caramel et la crème vanille.<br />
+						Jour J : Réalisez le craquelin et la pâte à choux, cuisez la pâte brisée puis passez au montage.</p>
+
+					<h3 class="parties">Pâte brisée :</h3>
+						<li>Mélangez, à la main ou dans le bol de votre robot muni de la feuille, la farine, le sucre, le sel et le beurre.</li>
+
+						<li>Ajoutez ensuite l’eau et le vinaigre blanc puis mélangez jusqu’à obtenir une pâte homogène.</li>
+
+						<li>Déposez-la dans du papier film et laissez-la reposer une à deux heures au réfrigérateur. La pâte doit être ferme pour être facile à travailler.</li>
+
+						<li>Étalez la pâte brisée et découpez un cercle de 24 cm.</li>
+
+						<li>Réservez au réfrigérateur (la cuisson se fera juste après la pâte à choux).</li>
+
+					<h3 class="parties">Le caramel beurre salé :</h3>
+						<li>Versez un peu de sucre et le miel dans une casserole.</li>
+
+						<li>Commencez à faire caraméliser le sucre, dès qu’il commence à fondre vous pouvez en ajouter un peu, et ainsi de suite jusqu’à avoir utilisé les 200 g de sucre. L’idéal est de verser le sucre en 4 ou 5 fois.</li>
+
+						<li>Quand votre caramel est presque prêt, portez en parallèle la crème à ébullition.</li>
+
+						<li>Éteignez votre feu (mais laissez la casserole dessus), puis versez la crème en un tout petit filet, mélangez en même temps le caramel et la crème. Attention aux projections de crème brûlante pendant cette étape.
+						Si vous avez du mal à faire les deux en même temps : versez un tout petit peu de crème puis mélangez, et renouvelez l’opération en ajoutant toujours plus de crème chaude.</li>
+
+						<li>Laissez refroidir à environ 60°C avant d’ajouter le beurre et la fleur de sel. Mélangez à l’aide d’un fouet jusqu’à ce que le caramel soit parfaitement homogène.</li>
+
+						<li>Versez le caramel dans un plat à gratin (pour qu’il refroidisse plus vite) et réservez-le au réfrigérateur.</li>
+
+					<h3 class="parties">La crème mascarpone à la vanille :</h3>
+						<li>Mettez la gélatine à tremper dans l’eau froide.</li>
+
+						<li>Fouettez les jaunes et le sucre ensemble.</li>
+
+						<li>Portez la crème à ébullition avec la gousse de vanille fendue et grattée et versez-la sur les jaunes et le sucre. Fouettez le tout et remettez sur le feu.</li>
+
+						<li>Laissez cuire, en remuant pour que la crème n’attache pas, jusqu’à 83° ou à la nappe.</li>
+
+						<li>Ajoutez la gélatine égouttée, mélangez à l’aide d’un fouet.</li>
+
+						<li>Laissez refroidir avant de filmer la crème au contact et de la réserver au réfrigérateur (laissez la gousse de vanille dedans). Le mascarpone sera ajouté juste avant le montage.</li>
+
+					<h3 class="parties">Le craquelin croustillant :</h3>
+						<li>Mélangez à la main la farine et la cassonade. Ajoutez le beurre et mélangez jusqu’à obtenir une pâte.</li>
+
+						<li>Étalez à 2 mm d’épaisseur à l’aide d’un rouleau à pâtisserie entre deux feuilles de papier sulfurisé ou silicone puis réservez-la au réfrigérateur.</li>
+
+					<h3 class="parties">La pâte à choux :</h3>
+						<li>Versez le lait, l’eau et le beurre coupé en morceaux dans une casserole.</li>
+
+						<li>Portez à ébullition puis versez la farine, le sel et le sucre, en une fois.</li>
+
+						<li>Mélangez à l’aide d’une cuillère en bois pendant 5 minutes à feu moyen pour dessécher la pâte.</li>
+
+						<li>Versez-la dans le bol de votre batteur muni de la feuille puis incorporez les œufs au fur et à mesure (pour avoir 125 g d’oeuf, fouettez 2 ou 3 œufs et pesez 125 g), la pâte doit être homogène, souple et brillante.</li>
+
+						<li>Versez dans une poche à douille et pochez des choux d’environ 3,5 cm de diamètre en gardant 4 cm d’écart pour éviter qu’ils ne se collent à la cuisson.</li>
+
+						<li>Préchauffez votre four à 170°C chaleur tournante.</li>
+
+						<li>Sortez le craquelin du réfrigérateur puis découpez des disques à l’aide d’un emporte-pièce de 4 cm. Vous pouvez reformer une boule de pâte et l’étaler à nouveau avec le reste de craquelin (il faudra le faire reprendre au froid pour pouvoir à nouveau le découper).</li>
+
+						<li>Déposez un disque de craquelin sur chaque chou. Vous aurez trop de choux, mais vous pourrez ainsi sélectionner les plus réussis pour votre Saint-Honoré.</li>
+
+						<li>Enfournez pendant 30 à 35 minutes à 170°C. Il est très important de ne jamais ouvrir la porte du four pendant la cuisson au risque de faire retomber votre pâte à choux.</li>
+
+						<li>Laissez simplement vos choux refroidir à la sortie du four.</li>
+
+						<li>Cuisez ensuite votre disque de pâte brisée pendant 20 minutes, toujours à 170°C chaleur tournante.</li>
+
+					<h3 class="parties">Montage du Saint-Honoré :</h3>
+						<p>Votre pâte à choux et votre fond de pâte brisée doivent être refroidis avant de passer au montage, pour éviter de faire fondre la crème et la chantilly.</p>
+
+						<li>Versez la crème à la vanille dans le bol de votre robot muni du fouet, en retirant la gousse que vous y aviez laissé infuser.
+						Elle va certainement vous paraître beaucoup trop gélifiée, mais pas d’inquiétude c’est normal et la texture finale ne sera pas du tout la même.</li>
+
+						<li>Fouettez la crème pour l’assouplir. Ajoutez ensuite le mascarpone et fouettez à vitesse rapide (8 sur 10) pour monter le tout. La crème doit s’éclaircir légèrement et devenir un peu plus épaisse.</li>
+
+						<li>Versez dans une poche munie d’un petite douille ronde.</li>
+
+						<li>Percez un petit trou sous vos choux puis garnissez de crème vanille en la laissant dépasser. Cela permettra aux choux de coller à votre fond de pâte brisée.</li>
+
+						<li>Répartissez les choux sur votre disque de pâte, en les faisant dépasser légèrement. Si vous faites comme moi, il vous faudra 10 choux, avec un petit espace entre chaque. Conservez un chou pour le centre de votre gâteau.</li>
+
+						<li>Garnissez maintenant le centre du Saint-Honoré sur environ 1 cm épaisseur.</li>
+
+						<li>Sortez le caramel au beurre salé du réfrigérateur. Il est conseillé de le verser dans une petite poche en plastique et de faire un tout petit trou, ce sera ainsi beaucoup plus facile de le répartir.</li>
+
+						<li>Couvrez la crème d’une couche de caramel. La quantité est au choix, mais n’utilisez surtout pas tout le caramel, il y en a volontairement trop.</li>
+
+						<li>Terminez en pochant par-dessus une nouvelle couche de crème vanille. S’il vous en reste, vous pourrez garnir les choux que vous avez en trop.</li>
+
+					<h3 class="parties">La chantilly :</h3>
+						<li>Montez la chantilly dans votre robot pâtisser muni du fouet, à vitesse moyenne. Ajoutez le sucre progressivement.</li>
+
+						<li>Versez la chantilly dans une poche munie d’une douille Saint-Honoré. Si vous n’avez jamais utilisé cette douille entraînez-vous sur une assiette avant.</li>
+
+						<li>Commencez par remplir l’espace entre les choux, puis revenez vers le centre.</li>
+
+						<li>Il ne vous reste plus qu’à poser un chou au centre et voilà votre Saint-Honoré enfin terminé !</li>
+
+						<li>Conservez-le au réfrigérateur et sortez-le 15 à 20 minutes avant de le servir pour qu’il ne soit pas trop froid.</li>
+                </ol>
+
+                <div id="placement_image">
+                	<img src="../../../Images/Images_recettes/sainthonore2.png" alt="Image d'un saint honore" id="image_recette" />
+                </div>
+                
+                <div id="trait_recette"></div>
+				<h3 id="indique_recette">Bon Appétit</h3>
+			</section>
+
+			<aside id="materiel">
+				<h2>Matériel :</h2> <!-- Liste du matériel -->
+					<p id="phrase_materiel"><i class="fas fa-hand-pointer"></i>(Cliquez sur l'un des ustensiles pour l'acheter)</p>
+				<ul>
+					<div class="responsive_placement">
+						<li>
+							<div class="objet_materiel">
+								<a href="https://www.amazon.fr/s?k=robot+patissier&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=TQPEDOQLUQVN&sprefix=robot+%2Caps%2C191&ref=nb_sb_ss_ts-a-p_1_6" target="_blank">
+									<img src="../../../Images/Images_ustensiles/robotpatissier.png" alt="Image d'un robot patissier"/>
+									<p>1 robot patissier</p>
+								</a>
+							</div>
+						</li>
+
+		                <li>
+		                	<div class="objet_materiel">
+			                	<a href="https://www.amazon.fr/s?k=rouleau+patisserie&i=kitchen&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=X22YEKN37AEW&sprefix=rouleau+%2Ckitchen%2C173&ref=nb_sb_ss_ts-a-p_2_8" target="_blank">
+			                		<img src="../../../Images/Images_ustensiles/rouleauapatisserie.png" alt="Image d'un rouleau à pâtisserie" />
+			                		<p>1 rouleau à pâtisserie</p>
+			                	</a>
+			                </div>
+		                </li>
+
+		                <li>
+		                	<div class="objet_materiel">
+			                	<a href="https://www.amazon.fr/Buyer-4938-40-Tapis-Airmat-Silicon%C3%A9/dp/B017EMLRTY/ref=as_li_ss_tl?ie=UTF8&qid=1504795056&sr=8-2&keywords=tapis+de+buyer&linkCode=sl1&tag=empreintesucr-21&linkId=fda70c36d8746e2c93b996ba304b1729&language=fr_FR" target="_blank">
+			                		<img src="../../../Images/Images_ustensiles/tapisensilicone.png" alt="Image d'un tapis en silicone perforé" />
+			                		<p>1 tapis en silicone perforé (facultatif)</p>
+			                	</a>
+			                </div>
+		                </li>
+		            </div>
+	                
+	                <div class="responsive_placement">
+		                <li>
+		                	<div class="objet_materiel">
+		                		<a href="https://www.amazon.fr/s?k=casserole&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_2" target="_blank">
+		                			<img src="../../../Images/Images_ustensiles/casserole.png" alt="Image d'une casserole" />
+		                			<p>1 casserole</p>
+		                		</a>
+		                	</div>
+		                </li>
+
+		                <li>
+		                	<div class="objet_materiel">
+		                		<a href="https://www.amazon.fr/s?k=fouet&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_2" target="_blank">
+		                			<img src="../../../Images/Images_ustensiles/fouet.png" alt="Image d'un fouet" />
+		                			<p>1 fouet</p>
+		                		</a>
+		                	</div>
+		                </li>
+
+		                <li>
+							<div class="objet_materiel">
+								<a href="https://www.amazon.fr/s?k=maryse&i=kitchen&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_2" target="_blank">
+									<img src="../../../Images/Images_ustensiles/maryse.png" alt="Image d'une maryse"/>
+									<p>1 maryse</p>
+								</a>
+							</div>
+						</li>
+					</div>
+
+					<div class="responsive_placement">
+		                <li>
+							<div class="objet_materiel">
+								<a href="https://www.amazon.fr/Lictin-Poche-Douille-Jetables-Patisserie/dp/B0713QG9C6/ref=sr_1_5?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=poche+cuisine&qid=1607544240&s=kitchen&sr=1-5" target="_blank">
+									<img src="../../../Images/Images_ustensiles/pocheadouille.png" alt="Image d'une poche à douille"/>
+									<p>1 poche à douille</p>
+								</a>
+							</div>
+						</li>
+
+
+		                 <li>
+		                	<div class="objet_materiel">
+		                		<a href="https://www.amazon.fr/Buyer-4132-06-Douilles-Sp%C3%A9ciales-P%C3%A2tisserie/dp/B00I0QM6B2/ref=as_li_ss_tl?_encoding=UTF8&pd_rd_i=B00I0QM6B2&pd_rd_r=f969bfad-b105-11e8-9d19-530a15f05916&pd_rd_w=bZlxE&pd_rd_wg=9ym1k&pf_rd_i=desktop-dp-sims&pf_rd_m=A1X6FK5RDHNB96&pf_rd_p=090bc395-5f65-417a-910c-c1aa58a5be54&pf_rd_r=CNYG4MGMZ8P318FBPR33&pf_rd_s=desktop-dp-sims&pf_rd_t=40701&psc=1&refRID=CNYG4MGMZ8P318FBPR33&linkCode=sl1&tag=empreintesucr-21&linkId=49fb7b8a8311aa766c1269de3ecfd50c&language=fr_FR" target="_blank">
+		                			<img src="../../../Images/Images_ustensiles/douilleronde.png" alt="Image d'une douille ronde " />
+		                			<p>1 douille ronde d’environ 12 mm</p>
+		                		</a>
+		                	</div>
+		                </li>
+
+		                 <li>
+		                	<div class="objet_materiel">
+		                		<a href="https://www.amazon.fr/Buyer-2115-20N-Douille-Honor%C3%A9-Soudure/dp/B001FWS1NU/ref=as_li_ss_tl?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=douille+saint-honor%C3%A9&qid=1592496672&sr=8-1&th=1&linkCode=sl1&tag=empreintesucr-21&linkId=c59694c2ec38a3eac50f02d4d43c0613&language=fr_FR" target="_blank">
+		                			<img src="../../../Images/Images_ustensiles/douillesainthonore.png" alt="Image d'une douille " />
+		                			<p>1 douille Saint-Honoré</p>
+		                		</a>
+		                	</div>
+		                </li>
+		            </div>
+				</ul>			
+			</aside>
+		</div>
+		
+		<footer>
+			<ul>
+				<li><a href="../../partenaires.html">Nos partenaires</a></li>
+				<li><a href="../../contact.html">Nous contacter</a></li>
+				<li><a href="../../stockage.html">Stockage des données</a></li>
+			</ul>
+
+			<div id="social">
+				<div id="twitter">
+					<a href="#"><i class="fab fa-twitter"></i></a>
+				</div>
+				<div id="instagram">
+					<a href="#"><i class="fab fa-instagram"></i></a>
+				</div>
+
+				<div id="facebook">
+					<a href="#"><i class="fab fa-facebook-f"></i></a>
+				</div>
+			</div>
+			<p class="copyrigh">© Rocket Food 2020. Tous droits réservés.</p>
+		</footer>
+	</body>
+</html>

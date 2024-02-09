@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Roulé de saumon fumé</title>
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="../../../CSS/style.css" />
+		<link rel="stylesheet" type="text/css" href="../../../CSS/navigation.css" />
+		<link rel="stylesheet" type="text/css" href="../../../CSS/styleMenuRecette.css" />
+		<link rel="stylesheet" type="text/css" href="../../../CSS/responsive.css" />
+		<link rel="stylesheet" type="text/css" href="../../../CSS/responsiveMenuRecette.css" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" />
+		<!-- JS -->
+		<script type="text/javascript" src="../../../JS/script.js"></script>
+	</head>
+	
+	<body onload="couleurDifficulte(); recupIngredient(); recupNbPersonneInitial(); remontePage();">
+		<div class="bouton">
+              <i class="fas fa-arrow-up" class="icone"></i>
+        </div>
+
+		<header>
+			<h1>Rocket Food</h1>
+			<nav>
+				<a href="../../../index.html">Accueil</a>
+				<a href="../../recette.html">Recettes</a>
+				<a href="../../materiel.html">Matériel</a>
+				<div class="animation start-home"></div>
+			</nav>
+
+			<div id="iconesTheme" title="Changer le thème" onclick="changementTheme()">
+				<div class="changeTheme">
+					<i class="fas fa-sun"></i>
+					<i class="fas fa-moon"></i>
+				</div>
+			</div>
+		</header>
+
+		
+		<div id="contenu">
+			
+			<aside id="ingredient">
+				<h2>Ingrédients :</h2>
+					<h3>Nombre de personnes :</h3>	<!--6 personnes-->
+					<div id="placeBouton">
+						<input type="button" name="moins" value="-" id="moins" onclick="moinsNum()" />
+						<input type="number" name="nbPersonne" value="6" min="1" max="100" id="nbPersonne" />
+						<input type="button" name="plus" value="+" id="plus" onclick="plusNum()" />
+					</div>
+
+				<ul>
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/saumon.png" alt="Image d'un saumon "/>
+								<figcaption><span class="nombreIngredient">6</span> tranches de saumon fumé</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/carotte.png" alt="Image d'une carotte"/>
+								<figcaption><span class="nombreIngredient">2</span> carottes</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/Poussedesoja.png" alt="Image d'une pousse de soja"/>
+								<figcaption><span class="nombreIngredient">50</span> g de pousse de soja</figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/poussedepinard.png" alt="Image de pousse d'epinard"/>
+								<figcaption><span class="nombreIngredient">50</span> g de pousse d'epinard</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/baierose.png" alt="Image de baie rose"/>
+								<figcaption><span class="nombreIngredient">5</span> g de baie rose</figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<p>Pour la sauce :</p>
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/saucesoja.png" alt="Image de sauce soja"/>
+								<figcaption><span class="nombreIngredient">3</span> cl de sauce soja</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/huileolive.png" alt="Image d'huile d'olive"/>
+								<figcaption><span class="nombreIngredient">3</span> cl d'huile d'olive</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/citronvert.png" alt="Image d'un citron vert"/>
+								<figcaption><span class="nombreIngredient">1</span> pièce de citron vert</figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/sel.png" alt="Image de sel"/>
+								<figcaption><span class="nombreIngredient">4</span> pincées de sel fin</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/poivre.png" alt="Image de poivre"/>
+								<figcaption><span class="nombreIngredient">4</span> tour de Moulin à poivre</figcaption>
+							</figure>
+						</li>
+					</div>
+				</ul>
+			</aside>
+
+			<section>
+				<h2>Roulé de saumon fumé</h2>
+				
+				<div id="banniere">
+					<ul>
+						<li>
+							<h3>Temps :</h3>
+							<p>15 minutes</p>
+						</li>
+
+						<li>
+							<h3>Difficulté :</h3>
+							<div id="placement_difficulte">
+								<div id="placement_cercles">
+									<div class="cercle"></div>
+									<div class="cercle"></div>
+									<div class="cercle"></div>
+								</div>
+								<p id="difficulte">Moyenne</p> <!-- voir en js pour recupéré la chaine et changer la couleur de la variable des cercles selon niv diff -->
+							</div>	
+						</li>
+
+						<li>
+							<h3>Coût :</h3>
+							<p>Bon marché</p>
+						</li>
+					</ul>
+				</div>
+
+				<div id="trait_recette"></div>
+				<h3 id="indique_recette">Recette :</h3>
+
+				<ol class="olRecette">
+                   	<li>Émincer les feuilles d'épinards en julienne.</li>
+					<li>Éplucher la carotte et la tailler en tranches puis en julienne.</li>
+					<li>Trier les pousses de soja.</li>
+					<li>Mélanger tous ces ingrédients en ajoutant les baies roses écrasées. </li>
+					<li>Poser ensuite le mélange au centre des tranches de saumon, puis rouler le tout et réaliser un boudin.</li>
+					<li>Tailler des morceaux de 3 cm de long.</li>
+
+					<h3 class="parties">Pour la sauce :</h3>
+						<li>Zester le citron et le presser.</li>
+						<li>Dans un bol, mélanger le sel, le poivre, le citron et l'huile d'olive et la sauce soja.</li>
+
+					<h3 class="parties">Dresssage :</h3>
+						<li>Dans une assiette, présenter les roulés de saumon debout.</li>
+						<li>Servir la sauce à part et décorer avec la garniture de légumes s'il en reste.</li>		
+            </ol>
+
+            <div id="placement_image">
+                	<img src="../../../Images/Images_recettes/saumon2.jpg" alt="Image de roulés de saumon fumé" id="image_recette" />
+                </div>
+                
+                <div id="trait_recette"></div>
+				<h3 id="indique_recette">Bon Appétit</h3>
+			</section>
+
+			<aside id="materiel">
+				<h2>Matériel :</h2> <!-- Liste du matériel -->
+					<p id="phrase_materiel"><i class="fas fa-hand-pointer"></i>(Cliquez sur l'un des ustensiles pour l'acheter)</p>
+				<ul>
+					<div class="responsive_placement">
+						<li>
+							<div class="objet_materiel">
+								<a href="https://www.amazon.fr/s?k=eplucheur&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=11Q8CWR4CF1ZQ&sprefix=eplu%2Caps%2C185&ref=nb_sb_ss_ts-a-p_3_4" target="_blank">
+									<img src="../../../Images/Images_ustensiles/eplucheur.png" alt="Image d'un éplucheur"/>
+									<p>1 éplucheur</p>
+								</a>
+							</div>
+						</li>
+
+		                <li>
+		                	<div class="objet_materiel">
+			                	<a href="https://www.amazon.fr/s?k=couteau+de+cuisine&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_2" target="_blank">
+			                		<img src="../../../Images/Images_ustensiles/couteau.png" alt="Image d'un couteau" />
+			                		<p>1 couteau</p>
+			                	</a>
+			                </div>
+		                </li>
+
+		                <li>
+							<div class="objet_materiel">
+								<a href="https://www.amazon.fr/s?k=zesteur&i=kitchen&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss" target="_blank">
+									<img src="../../../Images/Images_ustensiles/zesteur.png" alt="Image d'un zesteur"/>
+									<p>1 zesteur</p>
+								</a>
+							</div>
+						</li>
+					</div>
+
+					<div class="responsive_placement">
+		                <li>
+		                	<div class="objet_materiel">
+		                		<a href="https://www.amazon.fr/s?k=presseur+de+jus&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss" target="_blank">
+		                			<img src="../../../Images/Images_ustensiles/presseur.png" alt="Image d'un presseur" />
+		                			<p>1 presse-agrumes</p>
+		                		</a>
+		                	</div>
+		                </li>
+
+		                <li>
+		                	<div class="objet_materiel">
+		                		<a href="https://www.amazon.fr/s?k=saladier&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_2" target="_blank">
+		                			<img src="../../../Images/Images_ustensiles/saladier.png" alt="Image d'un saladier" />
+		                			<p>1 saladier</p>
+		                		</a>
+		                	</div>
+		                </li>
+		            </div>
+				</ul>	
+			</aside>
+		</div>
+		
+		<footer>
+			<ul>
+				<li><a href="../../partenaires.html">Nos partenaires</a></li>
+				<li><a href="../../contact.html">Nous contacter</a></li>
+				<li><a href="../../stockage.html">Stockage des données</a></li>
+			</ul>
+
+			<div id="social">
+				<div id="twitter">
+					<a href="#"><i class="fab fa-twitter"></i></a>
+				</div>
+				<div id="instagram">
+					<a href="#"><i class="fab fa-instagram"></i></a>
+				</div>
+
+				<div id="facebook">
+					<a href="#"><i class="fab fa-facebook-f"></i></a>
+				</div>
+			</div>
+			<p class="copyrigh">© Rocket Food 2020. Tous droits réservés.</p>
+		</footer>
+	</body>
+</html>

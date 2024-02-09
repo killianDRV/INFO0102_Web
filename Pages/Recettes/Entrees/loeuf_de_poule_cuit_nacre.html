@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>L'oeuf de poule cuit nacré</title>
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="../../../CSS/style.css" />
+		<link rel="stylesheet" type="text/css" href="../../../CSS/navigation.css" />
+		<link rel="stylesheet" type="text/css" href="../../../CSS/styleMenuRecette.css" />
+		<link rel="stylesheet" type="text/css" href="../../../CSS/responsive.css" />
+		<link rel="stylesheet" type="text/css" href="../../../CSS/responsiveMenuRecette.css" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" />
+		<!-- JS -->
+		<script type="text/javascript" src="../../../JS/script.js"></script>
+	</head>
+	
+	<body onload="couleurDifficulte(); recupIngredient(); recupNbPersonneInitial(); remontePage();">
+		<div class="bouton">
+              <i class="fas fa-arrow-up" class="icone"></i>
+        </div>
+
+		<header>
+			<h1>Rocket Food</h1>
+			<nav>
+				<a href="../../../index.html">Accueil</a>
+				<a href="../../recette.html">Recettes</a>
+				<a href="../../materiel.html">Matériel</a>
+				<div class="animation start-home"></div>
+			</nav>
+
+			<div id="iconesTheme" title="Changer le thème" onclick="changementTheme()">
+				<div class="changeTheme">
+					<i class="fas fa-sun"></i>
+					<i class="fas fa-moon"></i>
+				</div>
+			</div>
+		</header>
+
+		
+		<div id="contenu">
+			
+			<aside id="ingredient">
+				<h2>Ingrédients :</h2>
+					<h3>Nombre de personnes :</h3>  <!--4 personnes-->
+					<div id="placeBouton">
+						<input type="button" name="moins" value="-" id="moins" onclick="moinsNum()" />
+						<input type="number" name="nbPersonne" value="4" min="1" max="100" id="nbPersonne" />
+						<input type="button" name="plus" value="+" id="plus" onclick="plusNum()" />
+					</div>
+				<ul>
+					<p>Purée de topinambour :</p>
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/topinambour.png" alt="Image de topinambour"/>
+								<figcaption><span class="nombreIngredient">400</span> g de topinambour </figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/beurre.png" alt="Image de beurre"/>
+								<figcaption><span class="nombreIngredient">80</span> g de beurre</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/thym.png" alt="Image de thym"/>
+								<figcaption><span class="nombreIngredient">1</span> botte de thym</figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/ail.png" alt="Image d'ail "/>
+								<figcaption><span class="nombreIngredient">20</span> g d'ail</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/jusdeviande.png" alt="Image de jus de viande"/>
+								<figcaption><span class="nombreIngredient">6</span> cl de jus de viande</figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<p>Mousseline de topinambour :</p>
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/cremeliquide.png" alt="Image de crème liquide"/>
+								<figcaption><span class="nombreIngredient">150</span> g de crème liquide</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/agaragar.png" alt="Image d'agar-agar "/>
+								<figcaption><span class="nombreIngredient">1</span> g d'agar-agar</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/muscade.png" alt="Image de muscade"/>
+								<figcaption>noix de muscade</figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<p>Autre :</p>
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/oeuf.png" alt="Image d'oeufs"/>
+								<figcaption><span class="nombreIngredient">4</span> oeufs</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/foiegras.png" alt="Image de foie gras"/>
+								<figcaption><span class="nombreIngredient">40</span> g de foie gras</figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/noisette.png" alt="Image de noisettes"/>
+								<figcaption><span class="nombreIngredient">20</span> g de noisettes</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/huiledenoisette.png" alt="Image d'huile de noisette "/>
+								<figcaption><span class="nombreIngredient">6</span> cl d'huile de noisette </figcaption>
+							</figure>
+						</li>
+					</div>
+
+					<p>Dressage :</p>
+					<div class="responsive_placement">
+						<li>
+							<figure>
+								<img src="../../../Images/Images_ingredients/ciboulette.png" alt="Image de ciboulette "/>
+								<figcaption>ciboulette</figcaption>
+							</figure>
+						</li>
+					</div>
+				</ul>
+			</aside>
+
+			<section>
+				<h2>L'oeuf de poule cuit nacré</h2>
+				
+				<div id="banniere">
+					<ul>
+						<li>
+							<h3>Temps :</h3>
+							<p>1h30</p>
+						</li>
+
+						<li>
+							<h3>Difficulté :</h3>
+							<div id="placement_difficulte">
+								<div id="placement_cercles">
+									<div class="cercle"></div>
+									<div class="cercle"></div>
+									<div class="cercle"></div>
+								</div>
+								<p id="difficulte">Difficile</p> <!-- voir en js pour recupéré la chaine et changer la couleur de la variable des cercles selon niv diff -->
+							</div>	
+						</li>
+
+						<li>
+							<h3>Coût :</h3>
+							<p>Moyen</p>
+						</li>
+					</ul>
+				</div>
+
+				<div id="trait_recette"></div>
+				<h3 id="indique_recette">Recette :</h3>
+
+				<ol class="olRecette">
+					<h3 class="parties">Cuisson de l’oeuf :</h3>
+                   		<li>Cuire l'oeuf en immersion à 64°C pendant 45 min</li>
+
+                   	<h3 class="parties">Préparation du foie gras :</h3>
+                   		<li>Découper des dés de foie gras. Les faire cuire.</li>
+
+                   	<h3 class="parties">Préparation des chips :</h3>
+                   		<li>Faire des chips de topinambour à la mandoline. Les faire frire à 130° en friteuse et laisser sécher.</li>
+
+                   	<h3 class="parties">Préparation des noisettes :</h3>
+                   		<li>Faire caraméliser des noisettes.</li>
+
+                   	<h3 class="parties">Préparation de la purée de topinambours :</h3>
+                   		<li>Éplucher les topinambours. Faire suer au beurre frais, les topinambours avec du thym et de l'ail en chemise</li>
+                   		<li>Suer doucement et laisser cuire 20 minutes. Déglacer au jus de viande, faire caraméliser. </li>
+
+                   	<h3 class="parties">Finitions de la purée de topinambours :</h3>
+                   		<li>Retirer le thym et l'ail de la purée. Mixer la purée, passer au tamis. Dessécher.</li>
+
+                   	<h3 class="parties">Préparation de la mousseline de topinambour :</h3>
+                   		<li>Faire bouillir la crème liquide, ajouter 1g d'agar-agar. Au bain marie, (maximum 65°C), ajouter le mélange crème liquide et agar-agar à la purée. Assaisonner, raper de la muscade. </li>
+
+                   	<h3 class="parties">Finitions de la mousseline :</h3>
+                   		<li>Mettre dans un siphon avec 2 cartouches. Et réserver.</li>
+
+                   	<h3 class="parties">Dressage :</h3>
+                   	<li>Disposer la mousseline de topinambour, ajouter l'œuf au dessus. Disposer les chips de topinambour autour en rosace, les dés de foie gras poêlés et les noisettes. Ajouter des gouttes d'huile de noisettes. Mettre de la ciboulette sur l'oeuf.</li>
+
+                </ol>
+
+                <div id="placement_image">
+                	<img src="../../../Images/Images_recettes/loeufdepoulecuitnacre.jpg" alt="Image d'un oeuf de poule cuit nacré" id="image_recette" />
+                </div>
+                
+                <div id="trait_recette"></div>
+				<h3 id="indique_recette">Bon Appétit</h3>
+			</section>
+
+			<aside id="materiel">
+				<h2>Matériel :</h2> <!-- Liste du matériel -->
+					<p id="phrase_materiel"><i class="fas fa-hand-pointer"></i>(Cliquez sur l'un des ustensiles pour l'acheter)</p>
+				<ul>
+					<div class="responsive_placement">
+						<li>
+		                	<div class="objet_materiel">
+		                		<a href="https://www.amazon.fr/s?k=casserole&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_2" target="_blank">
+		                			<img src="../../../Images/Images_ustensiles/casserole.png" alt="Image d'une casserole" />
+		                			<p>1 casserole</p>
+		                		</a>
+		                	</div>
+		                </li>
+
+		                <li>
+		                	<div class="objet_materiel">
+		                		<a href="https://www.amazon.fr/s?k=siphon+cuisine&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_1" target="_blank">
+		                			<img src="../../../Images/Images_ustensiles/siphon.png" alt="Image d'un siphon" />
+		                			<p>1 siphon</p>
+		                		</a>
+		                	</div>
+		                </li>
+
+		                <li>
+		                	<div class="objet_materiel">
+			                	<a href="https://www.amazon.fr/gp/product/B000W02F0G/ref=as_li_tl?ie=UTF8&camp=1642&creative=19458&creativeASIN=B000W02F0G&linkCode=as2&tag=empreintesucr-21" target="_blank">
+			                		<img src="../../../Images/Images_ustensiles/thermosonde.png" alt="Image d'une thermo-sonde" />
+			                		<p>1 thermo-sonde</p>
+			                	</a>
+			                </div>
+		                </li>
+		            </div>
+
+		            <div class="responsive_placement">
+	                 	<li>
+		                	<div class="objet_materiel">
+			                	<a href="https://www.amazon.fr/s?k=poele&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_2" target="_blank">
+			                		<img src="../../../Images/Images_ustensiles/poele.png" alt="Image d'une poele" />
+			                		<p>1 poele</p>
+			                	</a>
+			                </div>
+	               		</li>
+
+						<li>
+							<div class="objet_materiel">
+								<a href="https://www.amazon.fr/s?k=four+encastrable&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1ZUI9FQJBSSUS&sprefix=four+enca%2Caps%2C191&ref=nb_sb_ss_ts-a-p_1_9" target="_blank">
+									<img src="../../../Images/Images_ustensiles/four.png" alt="Image d'un four"/>
+									<p>1 four</p>
+								</a>
+							</div>
+						</li>
+
+		                <li>
+		                	<div class="objet_materiel">
+			                	<a href="https://www.amazon.fr/s?k=couteau+de+cuisine&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_2" target="_blank">
+			                		<img src="../../../Images/Images_ustensiles/couteau.png" alt="Image d'un couteau" />
+			                		<p>1 couteau</p>
+			                	</a>
+			                </div>
+		                </li>
+		            </div>
+
+		            <div class="responsive_placement">
+		                <li>
+		                	<div class="objet_materiel">
+			                	<a href="https://www.amazon.fr/s?k=friteuse&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_1" target="_blank">
+			                		<img src="../../../Images/Images_ustensiles/friteuse.png" alt="Image d'une friteuse" />
+			                		<p>1 friteuse</p>
+			                	</a>
+			                </div>
+		                </li>
+
+		                <li>
+		                	<div class="objet_materiel">
+		                		<a href="https://www.amazon.fr/s?k=mixeur+plongeant&i=kitchen&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=WUISGL6NNNTG&sprefix=mixeur+plo%2Ckitchen%2C332&ref=nb_sb_ss_ts-a-p_1_10" target="_blank">
+		                			<img src="../../../Images/Images_ustensiles/mixeurplongeant.png" alt="Image d'un mixeur plongeant" />
+		                			<p>1 mixeur plongeant</p>
+		                		</a>
+		                	</div>
+		                </li>
+
+		                <li>
+		                	<div class="objet_materiel">
+		                		<a href="https://www.amazon.fr/s?k=rape&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_2" target="_blank">
+		                			<img src="../../../Images/Images_ustensiles/rape.png" alt="Image d'une rape" />
+		                			<p>1 rape</p>
+		                		</a>
+		                	</div>
+		                </li>
+		            </div>
+				</ul>
+			</aside>
+		</div>
+		
+		<footer>
+			<ul>
+				<li><a href="../../partenaires.html">Nos partenaires</a></li>
+				<li><a href="../../contact.html">Nous contacter</a></li>
+				<li><a href="../../stockage.html">Stockage des données</a></li>
+			</ul>
+
+			<div id="social">
+				<div id="twitter">
+					<a href="#"><i class="fab fa-twitter"></i></a>
+				</div>
+				<div id="instagram">
+					<a href="#"><i class="fab fa-instagram"></i></a>
+				</div>
+
+				<div id="facebook">
+					<a href="#"><i class="fab fa-facebook-f"></i></a>
+				</div>
+			</div>
+			<p class="copyrigh">© Rocket Food 2020. Tous droits réservés.</p>
+		</footer>
+	</body>
+</html>
